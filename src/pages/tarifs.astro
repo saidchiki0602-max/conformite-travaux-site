@@ -13,10 +13,10 @@ const faq = [
 ];
 const ld = [{ '@type': 'FAQPage', mainEntity: faq.map(i => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })) }];
 ---
-<Page title="Tarifs — vendeur, agence immobilière, étude notariale" description="Les tarifs de Conformité Travaux : test gratuit, dossier du bien pour le vendeur, abonnement ou tarif à l'unité pour les agences et les études notariales." path="/tarifs/" ld={ld}>
+<Page title="Tarifs : vérifier le dossier travaux d'une vente" description="Tarifs pour vérifier le dossier travaux d'une vente : test gratuit, dossier du bien pour le vendeur, abonnement ou prix à l'unité pour agences et notaires." path="/tarifs/" ld={ld}>
 <header class="ph2"><div class="wrap">
   <nav class="crumb" aria-label="Fil d'Ariane"><a href={L('/')}>Accueil</a> › Tarifs</nav>
-  <h1>Tarifs de Conformité Travaux</h1>
+  <h1>Tarifs : vérifier le dossier travaux d'une vente</h1>
   <p class="sub" style="margin-top:16px">Le test est gratuit pour tout le monde. Ensuite, un prix par bien pour le vendeur, et un abonnement ou un tarif à l'unité pour les professionnels. Aucune de ces offres payantes n'est encore ouverte.</p>
 </div></header>
 <section class="who"><div class="wrap">

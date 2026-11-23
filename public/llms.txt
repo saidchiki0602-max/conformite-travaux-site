@@ -14,10 +14,10 @@
 
 ## Pages
 - / : présentation
-- /test/ : test gratuit en cinq questions
-- /vendeur/ : pour le vendeur d'une maison ayant eu des travaux
-- /agence-immobiliere/ : pré-contrôle avant mandat pour les agents immobiliers
-- /notaire/ : collecte des pièces et note pour l'acte pour les études notariales
+- /verifier-travaux-avant-vente/ : test gratuit en cinq questions
+- /vendre-maison-travaux-non-declares/ : pour le vendeur d'une maison ayant eu des travaux
+- /agent-immobilier-travaux-non-declares/ : pré-contrôle avant mandat pour les agents immobiliers
+- /notaire-pieces-travaux-vente/ : collecte des pièces et note pour l'acte pour les études notariales
 - /tarifs/ : tarifs
 - /comment-ca-marche/ : fonctionnement en quatre étapes
 - /guides/ : guides par situation

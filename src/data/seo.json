@@ -1,6 +1,6 @@
 {
   "index": {
-    "requete": "pièces travaux vente maison",
+    "requete": "vendre maison travaux pièces notaire",
     "variantes": [
       "dossier travaux notaire",
       "papiers travaux pour vendre",
@@ -111,38 +111,38 @@
     "intention": "",
     "pourquoi": ""
   },
-  "vendeur": {
-    "requete": "vendre maison travaux",
+  "vendre-maison-travaux-non-declares": {
+    "requete": "vendre maison travaux non déclarés",
     "variantes": [],
     "intention": "",
     "pourquoi": ""
   },
-  "agence-immobiliere": {
-    "requete": "agents immobiliers travaux mandat",
+  "agent-immobilier-travaux-non-declares": {
+    "requete": "agent immobilier travaux non déclarés",
     "variantes": [],
     "intention": "",
     "pourquoi": ""
   },
-  "notaire": {
-    "requete": "notaires pièces travaux vente",
+  "notaire-pieces-travaux-vente": {
+    "requete": "notaire pièces travaux vente",
     "variantes": [],
     "intention": "",
     "pourquoi": ""
   },
   "tarifs": {
-    "requete": "tarifs",
+    "requete": "tarifs dossier travaux vente",
     "variantes": [],
     "intention": "",
     "pourquoi": ""
   },
   "comment-ca-marche": {
-    "requete": "comment ça marche",
+    "requete": "dossier travaux notaire",
     "variantes": [],
     "intention": "",
     "pourquoi": ""
   },
-  "test": {
-    "requete": "test dossier travaux vente",
+  "verifier-travaux-avant-vente": {
+    "requete": "vérifier travaux avant vente",
     "variantes": [],
     "intention": "",
     "pourquoi": ""

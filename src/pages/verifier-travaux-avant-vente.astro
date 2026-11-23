@@ -11,14 +11,14 @@ const faq = [
   { q: "Un agent immobilier ou un notaire peut-il l'utiliser ?", a: "Oui. Choisissez votre profil au début : le résultat est alors présenté pour être remis au vendeur." },
 ];
 const ld = [
-  { '@type': 'WebApplication', name: 'Test : dossier travaux complet pour la vente ?', applicationCategory: 'UtilitiesApplication', operatingSystem: 'Web', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' } },
+  { '@type': 'WebApplication', name: 'Vérifier les travaux avant la vente', applicationCategory: 'UtilitiesApplication', operatingSystem: 'Web', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' } },
   { '@type': 'FAQPage', mainEntity: faq.map(i => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })) },
 ];
 ---
-<Page title="Test gratuit : dossier travaux complet pour la vente ?" description="Cinq questions sur les travaux de la maison : la liste des pièces que le notaire demandera, ce qui manque et comment régulariser. Gratuit, sans compte." path="/test/" ld={ld}>
+<Page title="Vérifier les travaux avant la vente : test gratuit" description="Cinq questions sur les travaux de la maison : la liste des pièces que le notaire demandera, ce qui manque et comment régulariser. Gratuit, sans compte." path="/verifier-travaux-avant-vente/" ld={ld}>
 <header class="ph2"><div class="wrap" style="max-width:860px">
   <nav class="crumb" aria-label="Fil d'Ariane"><a href={L('/')}>Accueil</a> › Test gratuit</nav>
-  <h1>Test gratuit : votre dossier travaux est-il complet pour la vente ?</h1>
+  <h1>Vérifier les travaux avant la vente : votre dossier est-il complet ?</h1>
   <p class="sub" style="margin-top:16px">Cinq questions, deux minutes, sans compte. À la fin : les pièces que le notaire attendra pour ce bien, celles qui manquent, et quoi faire pour chacune.</p>
 </div></header>
 <section class="outil"><div class="wrap"><h2 style="max-width:720px;margin:0 auto 18px;font-size:clamp(1.3rem,2.4vw,1.6rem)">Les cinq questions</h2><Tool /></div></section>

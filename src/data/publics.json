@@ -1,12 +1,12 @@
 [
   {
-    "slug": "vendeur",
+    "slug": "vendre-maison-travaux-non-declares",
     "role": "Vendeur",
     "offre": 0,
-    "title": "Vendre sa maison après des travaux : le dossier à préparer",
+    "title": "Vendre une maison avec travaux non déclarés : le dossier",
     "description": "Vendre une maison après des travaux : la liste des pièces que le notaire demandera, ce qui manque et comment le régler avant le compromis.",
     "lbl": "Pour le vendeur",
-    "h1": "Vous vendez une maison qui a eu des travaux : préparez le dossier avant le compromis.",
+    "h1": "Vendre une maison avec des travaux non déclarés ou mal documentés : préparez le dossier avant le compromis.",
     "chapo": "Extension, véranda, combles, piscine, électricité refaite : le notaire vous demandera des papiers pour chacun. Les réunir avant de signer le compromis ne coûte presque rien ; les chercher après coûte du temps, et souvent une part du prix.",
     "reponse": "Pour vendre une maison qui a eu des travaux, le notaire demande l'autorisation d'urbanisme, la déclaration d'achèvement, les factures, les attestations d'assurance décennale des entreprises et, pour des travaux de moins de dix ans, l'assurance dommages-ouvrage. Le test gratuit donne la liste exacte pour votre maison en deux minutes.",
     "pb": {
@@ -61,13 +61,13 @@
     ]
   },
   {
-    "slug": "agence-immobiliere",
+    "slug": "agent-immobilier-travaux-non-declares",
     "role": "Agent immobilier",
     "offre": 1,
-    "title": "Agents immobiliers : vérifier les travaux avant le mandat",
+    "title": "Agent immobilier : travaux non déclarés avant le mandat",
     "description": "Pré-contrôle des travaux d'un bien avant le mandat : écart de surface entre DPE et cadastre, autorisations manquantes, questions à poser au vendeur.",
     "lbl": "Pour l'agence immobilière",
-    "h1": "Agents immobiliers : savoir ce qui manque au dossier travaux avant de signer le mandat.",
+    "h1": "Agent immobilier : repérer les travaux non déclarés et les pièces manquantes avant de signer le mandat.",
     "chapo": "Un bien dont l'extension n'a jamais été déclarée se vend comme les autres, jusqu'au jour où le notaire s'en aperçoit. Le vérifier avant le mandat change la conversation avec le vendeur, et protège la vente.",
     "reponse": "Avant de signer un mandat, un agent immobilier peut vérifier les travaux d'un bien en comparant la surface du diagnostic de performance énergétique à celle du cadastre, puis en demandant au vendeur les autorisations et les assurances correspondantes. Conformité Travaux prépare ce pré-contrôle et la liste des questions à poser en rendez-vous.",
     "pb": {
@@ -123,10 +123,10 @@
     ]
   },
   {
-    "slug": "notaire",
+    "slug": "notaire-pieces-travaux-vente",
     "role": "Notaire ou clerc",
     "offre": 2,
-    "title": "Notaires : réunir les pièces travaux d'une vente",
+    "title": "Notaire : réunir les pièces travaux avant l'acte de vente",
     "description": "Pour les études notariales : repérer les ventes concernées par des travaux, demander les pièces au vendeur et à la mairie, préparer la note pour l'acte.",
     "lbl": "Pour l'étude notariale",
     "h1": "Notaires : les pièces travaux de chaque vente, réunies avant la signature.",

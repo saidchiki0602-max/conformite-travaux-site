@@ -16,6 +16,6 @@ const ld = [{ '@type': 'DefinedTermSet', name: 'Lexique des travaux et de la ven
 </div></header>
 <section><div class="wrap">
   <div class="lex">{termes.map(t => <div id={slug(t.t)}><h2>{t.t.charAt(0).toUpperCase() + t.t.slice(1)}</h2><p>{t.d}</p>{t.v.length > 0 && <small>On dit aussi : {t.v.join(', ')}</small>}</div>)}</div>
-  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px"><a class="btn p" href={L('/test/')}>Faire le test gratuit</a><a class="btn s" href={L('/guides/')}>Lire les guides</a></div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px"><a class="btn p" href={L('/verifier-travaux-avant-vente/')}>Faire le test gratuit</a><a class="btn s" href={L('/guides/')}>Lire les guides</a></div>
 </div></section>
 </Page>

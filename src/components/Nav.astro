@@ -1,17 +1,17 @@
 ---
 import { L } from '../lib/links';
-const links: [string, string][] = [['Le test', '/test/'], ['Vendeur', '/vendeur/'], ['Agences', '/agence-immobiliere/'], ['Notaires', '/notaire/'], ['Guides', '/guides/'], ['Tarifs', '/tarifs/']];
+const links: [string, string][] = [['Le test', '/verifier-travaux-avant-vente/'], ['Vendeur', '/vendre-maison-travaux-non-declares/'], ['Agences', '/agent-immobilier-travaux-non-declares/'], ['Notaires', '/notaire-pieces-travaux-vente/'], ['Guides', '/guides/'], ['Tarifs', '/tarifs/']];
 ---
 <nav class="nav"><div class="wrap">
   <a class="logo" href={L('/')}><i>§</i>Conformité Travaux</a>
   <ul>{links.map(([n, h]) => <li><a href={L(h)}>{n}</a></li>)}</ul>
   <a class="kaert" href="https://kaertgroupe.com/">Un produit Kaërt</a>
-  <a class="btn p dsk" href={L('/test/')} style="padding:11px 18px;font-size:14.5px">Tester en 2 min</a>
+  <a class="btn p dsk" href={L('/verifier-travaux-avant-vente/')} style="padding:11px 18px;font-size:14.5px">Tester en 2 min</a>
   <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mob"><span></span><span></span><span></span></button>
 </div>
 <div class="mob" id="mob" hidden>
   {links.map(([n, h]) => <a href={L(h)}>{n}</a>)}
-  <a class="btn p" href={L('/test/')} style="margin-top:12px;justify-content:center">Tester en 2 min</a>
+  <a class="btn p" href={L('/verifier-travaux-avant-vente/')} style="margin-top:12px;justify-content:center">Tester en 2 min</a>
 </div></nav>
 <script is:inline>
   (function () {

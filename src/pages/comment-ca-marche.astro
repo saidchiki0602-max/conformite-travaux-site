@@ -15,10 +15,10 @@ const ld = [
   { '@type': 'FAQPage', mainEntity: faq.map(i => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })) },
 ];
 ---
-<Page title="Comment ça marche — Conformité Travaux" description="Comment ça marche, du test gratuit au dossier remis au notaire : quatre étapes, ce que l'outil fait à votre place et ce qu'il ne fait pas." path="/comment-ca-marche/" ld={ld}>
+<Page title="Comment ça marche : le dossier travaux remis au notaire" description="Comment ça marche, du test gratuit au dossier travaux remis au notaire : quatre étapes, ce que l'outil fait à votre place et ce qu'il ne fait pas." path="/comment-ca-marche/" ld={ld}>
 <header class="ph2"><div class="wrap" style="max-width:860px">
   <nav class="crumb" aria-label="Fil d'Ariane"><a href={L('/')}>Accueil</a> › Comment ça marche</nav>
-  <h1>Comment ça marche : du test gratuit au dossier remis au notaire</h1>
+  <h1>Comment ça marche : du test gratuit au dossier travaux remis au notaire</h1>
   <p class="sub" style="margin-top:16px">Quatre étapes, de l'adresse du bien au dossier remis au notaire. L'outil fait les démarches ; vous validez ce qui part et ce qu'il a compris.</p>
 </div></header>
 <section style="padding-block:clamp(28px,4vw,44px) 0"><div class="wrap" style="max-width:860px">
@@ -39,7 +39,7 @@ const ld = [
     <div><h3 class="h3c">Vous</h3><p>Répondez aux cinq questions, photographiez vos papiers, validez les envois et corrigez ce que l'outil a mal compris.</p></div>
     <div><h3 class="h3c">Le notaire</h3><p>Apprécie la situation, informe l'acquéreur, rédige l'acte. L'outil ne donne pas de conseil juridique.</p></div>
   </div>
-  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px"><a class="btn p" href={L('/test/')}>Faire le test gratuit</a><a class="btn s" href={L('/tarifs/')}>Voir les tarifs</a></div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px"><a class="btn p" href={L('/verifier-travaux-avant-vente/')}>Faire le test gratuit</a><a class="btn s" href={L('/tarifs/')}>Voir les tarifs</a></div>
 </div></section>
 <Faq title="Questions fréquentes sur le fonctionnement" items={faq} />
 </Page>

@@ -1,10 +1,10 @@
 {
-  "title": "Pièces travaux pour vendre une maison — Conformité Travaux",
-  "description": "Les pièces travaux exigées pour la vente d'une maison — permis, achèvement, assurances — ce qui manque et comment régulariser. Test gratuit.",
+  "title": "Vendre une maison après travaux : les pièces du notaire",
+  "description": "Vendre une maison après des travaux : les pièces que le notaire exigera (permis, achèvement, assurances), ce qui manque, comment régulariser. Test gratuit.",
   "path": "/",
   "hero": {
     "who": "Vendeurs · agents immobiliers · notaires",
-    "h1": "Vendre une maison avec des travaux : les pièces que le notaire va exiger, trouvées avant la signature.",
+    "h1": "Vendre une maison après des travaux : les pièces que le notaire va exiger, trouvées avant la signature.",
     "sub": "Extension, véranda, piscine, électricité refaite, maison construite soi-même : le notaire va demander des papiers que personne n'a préparés. Cinq questions, et vous savez lesquels, ce que leur absence coûte, et comment régulariser à temps.",
     "cta": "Faire le test gratuit",
     "cta2": "Pour les agences et les études",
@@ -36,7 +36,7 @@
           "Le dossier en PDF pour votre notaire ou votre agent — ou un lien direct"
         ],
         "role": "Vendeur",
-        "page": "/vendeur/"
+        "page": "/vendre-maison-travaux-non-declares/"
       },
       {
         "who": "Agence immobilière",
@@ -53,7 +53,7 @@
           "Transmission à l'étude au compromis : le notaire gagne 2 à 3 semaines"
         ],
         "role": "Agent immobilier",
-        "page": "/agence-immobiliere/"
+        "page": "/agent-immobilier-travaux-non-declares/"
       },
       {
         "who": "Étude notariale",
@@ -70,7 +70,7 @@
           "Remise du carnet à l'acquéreur après signature"
         ],
         "role": "Notaire ou clerc",
-        "page": "/notaire/"
+        "page": "/notaire-pieces-travaux-vente/"
       }
     ]
   },
