@@ -4,7 +4,7 @@
 
 ## Ce que le service fait
 - Test gratuit en cinq questions, sans compte : la liste des pièces pour ce bien, les pièces bloquantes, le délai et le coût de chaque régularisation.
-- Dossier complet du bien (49 €, à l'ouverture) : demandes envoyées en nom propre à la mairie, au Consuel et aux assureurs, lecture et classement des pièces déposées, formulaire de régularisation prérempli, dossier PDF pour le notaire.
+- Dossier complet du bien (149 € pour un chantier, 349 € pour plusieurs chantiers ou une régularisation, à l'ouverture) : demandes envoyées en nom propre à la mairie, au Consuel et aux assureurs, lecture et classement des pièces déposées, formulaire de régularisation prérempli, dossier PDF pour le notaire.
 - Agence immobilière (79 € HT/mois ou 19 € par bien, à l'ouverture) : pré-contrôle d'un bien avant la signature du mandat, alerte sur les écarts de surface entre DPE et cadastre.
 - Étude notariale (149 € HT/mois ou 29 € par dossier, à l'ouverture) : création automatique des dossiers depuis la boîte mail de l'étude, demandes et relances, note pour l'acte, remise du dossier à l'acquéreur après la signature.
 

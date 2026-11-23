@@ -23,8 +23,8 @@
       {
         "who": "Vendeur",
         "t": "Vendre sans surprise chez le notaire",
-        "pr": "49 €",
-        "unit": " · une fois, pour ce bien",
+        "pr": "149 €",
+        "unit": " · une fois, pour ce bien · 349 € si plusieurs chantiers ou une régularisation",
         "feat": true,
         "cta": "Être prévenu à l'ouverture",
         "note": "Ouverture prévue en janvier. Le test, lui, est disponible maintenant et vous garde votre liste.",
@@ -50,7 +50,7 @@
           "Alerte quand le DPE annonce plus de surface que le cadastre",
           "La page à remettre au vendeur en rendez-vous — un argument de mandat",
           "Les 5 questions envoyées au vendeur par SMS, les réponses dans votre dossier",
-          "Transmission à l'étude au compromis : le notaire gagne 2 à 3 semaines"
+          "Transmission à l'étude au compromis : le dossier arrive complet chez le notaire"
         ],
         "role": "Agent immobilier",
         "page": "/agent-immobilier-travaux-non-declares/"
@@ -164,8 +164,8 @@
   "final": {
     "lbl": "Ouverture",
     "h2": "Le test est ouvert. Le dossier complet arrive.",
-    "p": "Laissez un e-mail : vous êtes prévenu le jour où le dossier à 49 € ouvre, et avant tout le monde pour les agences et les études. Un message à l'ouverture, pas de relance.",
-    "p2": "Conformité Travaux fait partie de la suite Kaërt pour le bâtiment, avec Kōv, MOEpilote et MonChantier. Un dossier commencé dans l'une se retrouve dans les autres."
+    "p": "Laissez un e-mail : vous êtes prévenu le jour où le dossier complet ouvre, et avant tout le monde pour les agences et les études. Un message à l'ouverture, pas de relance.",
+    "p2": "Conformité Travaux fait partie de la suite Kaërt pour le bâtiment, avec Kōv, MOEpilote et Travaux Sans Piège. Un dossier commencé dans l'une se retrouve dans les autres."
   },
   "faq": {
     "title": "Travaux non déclarés et vente d'une maison : les questions fréquentes.",
@@ -237,7 +237,7 @@
     "cta": "Voir l'offre professionnelle"
   },
   "recois": {
-    "lbl": "Le dossier à 49 €",
+    "lbl": "Le dossier complet",
     "h2": "Le dossier complet du bien : ce que vous recevez, et quand.",
     "sub": "Le test est gratuit et reste gratuit. Le dossier payant, c'est quand vous voulez que les démarches soient faites plutôt que listées.",
     "items": [
