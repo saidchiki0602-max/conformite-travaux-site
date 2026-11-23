@@ -1,0 +1,62 @@
+---
+import Page from '../../layouts/Page.astro';
+import WaitForm from '../../components/WaitForm.astro';
+import Faq from '../../components/Faq.astro';
+import guides from '../../data/guides.json';
+import { L } from '../../lib/links';
+export function getStaticPaths() {
+  return guides.map(g => ({ params: { slug: g.slug }, props: { g } }));
+}
+const { g } = Astro.props;
+const site = Astro.site?.href.replace(/\/$/, '') ?? '';
+const url = site + '/guides/' + g.slug + '/';
+const fr = (d: string) => new Date(d + 'T12:00:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+const autres = guides.filter(x => x.slug !== g.slug).slice(0, 3);
+const ld = [
+  { '@type': 'Article', headline: g.h1, description: g.description, inLanguage: 'fr-FR', mainEntityOfPage: url,
+    datePublished: g.publie, dateModified: g.maj,
+    author: { '@id': site + '/#org' },
+    publisher: { '@id': site + '/#org' }, image: site + '/conformite-travaux-pieces-notaire-vente-maison.png' },
+  { '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: site + '/' },
+    { '@type': 'ListItem', position: 2, name: 'Guides', item: site + '/guides/' },
+    { '@type': 'ListItem', position: 3, name: g.title, item: url } ] },
+  { '@type': 'FAQPage', mainEntity: g.faq.map(i => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })) },
+];
+---
+<Page title={g.title} description={g.description} path={'/guides/' + g.slug + '/'} ld={ld} type="article">
+<header class="ph2"><div class="wrap" style="max-width:780px">
+  <nav class="crumb" aria-label="Fil d'Ariane"><a href={L('/')}>Accueil</a> › <a href={L('/guides/')}>Guides</a></nav>
+  <h1>{g.h1}</h1>
+  <p class="sub" style="margin-top:16px">{g.chapo}</p>
+  <p class="by">Mis à jour le <time datetime={g.maj}>{fr(g.maj)}</time></p>
+</div></header>
+<section style="padding-top:clamp(24px,3vw,36px)"><div class="wrap" style="max-width:780px">
+  <div class="rep"><div class="lbl">La réponse courte</div><p>{g.reponse}</p></div>
+  <div class="art">
+    {g.sections.map(s => <><h2>{s.h}</h2>{s.p.map(x => <p set:html={x} />)}</>)}
+  </div>
+  <div class="src">
+    <b>Textes de référence</b>
+    <ul>{g.sources.map(s => <li>{s}</li>)}</ul>
+    <p>Textes consultables sur <a href="https://www.legifrance.gouv.fr/" rel="noopener">Légifrance</a>. Ce guide informe ; l'appréciation de votre situation revient à votre notaire.</p>
+  </div>
+  <div class="next" style="margin-top:34px">
+    <div><h3>Votre cas en deux minutes</h3><p>Cinq questions sur vos travaux, et la liste des pièces que le notaire attendra — avec le chemin pour chacune.</p></div>
+    <a class="btn p" href={L('/#outil')}>Faire le test</a>
+  </div>
+</div></section>
+<Faq title={'Questions fréquentes'} items={g.faq} />
+<section style="padding-block:clamp(36px,5vw,60px)"><div class="wrap">
+  <div class="lbl">À lire aussi</div>
+  <div class="glist" style="margin-top:14px">{autres.map(a => <a class="gcard" href={L('/guides/' + a.slug + '/')}><b>{a.title}</b><p>{a.reponse.split('. ')[0]}.</p><span>Lire le guide →</span></a>)}</div>
+</div></section>
+<section class="final" id="commencer"><div class="wrap">
+  <div>
+    <div class="lbl" style="color:var(--acc2)">Ouverture</div>
+    <h2 style="margin-top:12px">Le dossier complet du bien arrive.</h2>
+    <p>Les demandes à la mairie envoyées en votre nom, vos pièces lues et classées, le dossier remis à votre notaire. Laissez un e-mail pour être prévenu à l'ouverture.</p>
+  </div>
+  <WaitForm />
+</div></section>
+</Page>

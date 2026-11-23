@@ -1,0 +1,50 @@
+---
+import Page from '../layouts/Page.astro';
+import Faq from '../components/Faq.astro';
+import WaitForm from '../components/WaitForm.astro';
+import d from '../data/pages/index.json';
+import { L } from '../lib/links';
+const faq = [
+  { q: "Le test en cinq questions est-il payant ?", a: "Non. Il est gratuit, sans compte et sans e-mail, et le restera. Il donne la liste des pièces attendues pour votre bien et le chemin pour chacune." },
+  { q: "Que comprend le dossier du bien pour un vendeur ?", a: "Les demandes envoyées en votre nom à la mairie, au Consuel et aux assureurs, la lecture et le classement de vos pièces, le formulaire de régularisation prérempli et le dossier remis à votre notaire. Le paiement se fait une fois, pour un bien." },
+  { q: "Y a-t-il un engagement pour les agences et les études ?", a: "Non. L'abonnement est mensuel et s'arrête quand vous le décidez. Un tarif à l'unité existe pour ceux qui traitent peu de dossiers." },
+  { q: "Quand les offres ouvrent-elles ?", a: "Elles ne sont pas encore ouvertes. Laissez un e-mail sur cette page : vous êtes prévenu le jour de l'ouverture, par un seul message." },
+  { q: "Que se passe-t-il si la mairie n'a aucune trace des travaux ?", a: "Vous recevez sa réponse dans votre dossier, et un bouton de remboursement y apparaît. Vous ne payez pas pour une recherche qui ne donne rien." },
+];
+const ld = [{ '@type': 'FAQPage', mainEntity: faq.map(i => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })) }];
+---
+<Page title="Tarifs — vendeur, agence immobilière, étude notariale" description="Les tarifs de Conformité Travaux : test gratuit, dossier du bien pour le vendeur, abonnement ou tarif à l'unité pour les agences et les études notariales." path="/tarifs/" ld={ld}>
+<header class="ph2"><div class="wrap">
+  <nav class="crumb" aria-label="Fil d'Ariane"><a href={L('/')}>Accueil</a> › Tarifs</nav>
+  <h1>Tarifs de Conformité Travaux</h1>
+  <p class="sub" style="margin-top:16px">Le test est gratuit pour tout le monde. Ensuite, un prix par bien pour le vendeur, et un abonnement ou un tarif à l'unité pour les professionnels. Aucune de ces offres payantes n'est encore ouverte.</p>
+</div></header>
+<section class="who"><div class="wrap">
+  <h2>Combien coûte Conformité Travaux ?</h2>
+  <div class="g">
+    {d.pourqui.offres.map(o => (
+      <div class={'card' + (o.feat ? ' feat' : '')}>
+        <div class="lbl">{o.who}</div><h3>{o.t}</h3>
+        <div class="pr">{o.pr}<span>{o.unit}</span></div>
+        <ul>{o.items.map(i => <li><i>§</i>{i}</li>)}</ul>
+        <a class={'btn ' + (o.feat ? 'p' : 's')} href="#commencer" data-role={o.role}>{o.cta}</a>
+        <div class="note">{o.note}</div>
+        <div class="note"><a href={L(o.page)} style="color:var(--acc);font-weight:700">En savoir plus →</a></div>
+      </div>
+    ))}
+  </div>
+</div></section>
+<section class="recois"><div class="wrap">
+  <h2>Qu'est-ce qui est gratuit, et qu'est-ce qui est payant ?</h2>
+  <div class="tl2" style="grid-template-columns:1fr 1fr">
+    <div><h3 class="h3c">Gratuit, sans compte</h3><p>Le test en cinq questions, la liste des pièces attendues pour votre bien, le chemin de régularisation de chacune, les guides et le lexique. Vous pouvez imprimer le résultat ou le recevoir par e-mail.</p></div>
+    <div><h3 class="h3c">Payant</h3><p>Tout ce que l'outil fait à votre place : envoyer les demandes en votre nom, suivre les réponses et relancer, lire et classer vos pièces, préparer les formulaires, remettre le dossier au notaire.</p></div>
+  </div>
+  <p class="note2">{d.recois.note}</p>
+</div></section>
+<Faq title="Questions fréquentes sur les tarifs" items={faq} />
+<section class="final" id="commencer"><div class="wrap">
+  <div><div class="lbl" style="color:var(--acc2)">Ouverture</div><h2 style="margin-top:12px" id="waitf-title">Être prévenu à l'ouverture des offres.</h2><p>Un seul message, le jour de l'ouverture. Pas de relance.</p></div>
+  <WaitForm />
+</div></section>
+</Page>

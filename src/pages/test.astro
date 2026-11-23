@@ -1,0 +1,36 @@
+---
+import Page from '../layouts/Page.astro';
+import Tool from '../components/Tool.astro';
+import Faq from '../components/Faq.astro';
+import WaitForm from '../components/WaitForm.astro';
+import { L } from '../lib/links';
+const faq = [
+  { q: "Que donne le test à la fin ?", a: "La liste des pièces que le notaire attendra pour ce bien, avec pour chacune son état — à joindre, à retrouver, à traiter avant l'acte ou non exigible — et le chemin pour l'obtenir ou régulariser." },
+  { q: "Mes réponses sont-elles enregistrées ?", a: "Non. Le calcul se fait dans votre navigateur. Rien n'est transmis, sauf si vous demandez à recevoir la liste par e-mail." },
+  { q: "La maison a eu plusieurs travaux : comment faire ?", a: "Refaites le test pour chaque chantier. Une extension et une piscine n'appellent pas les mêmes pièces." },
+  { q: "Un agent immobilier ou un notaire peut-il l'utiliser ?", a: "Oui. Choisissez votre profil au début : le résultat est alors présenté pour être remis au vendeur." },
+];
+const ld = [
+  { '@type': 'WebApplication', name: 'Test : dossier travaux complet pour la vente ?', applicationCategory: 'UtilitiesApplication', operatingSystem: 'Web', offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' } },
+  { '@type': 'FAQPage', mainEntity: faq.map(i => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })) },
+];
+---
+<Page title="Test gratuit : dossier travaux complet pour la vente ?" description="Cinq questions sur les travaux de la maison : la liste des pièces que le notaire demandera, ce qui manque et comment régulariser. Gratuit, sans compte." path="/test/" ld={ld}>
+<header class="ph2"><div class="wrap" style="max-width:860px">
+  <nav class="crumb" aria-label="Fil d'Ariane"><a href={L('/')}>Accueil</a> › Test gratuit</nav>
+  <h1>Test gratuit : votre dossier travaux est-il complet pour la vente ?</h1>
+  <p class="sub" style="margin-top:16px">Cinq questions, deux minutes, sans compte. À la fin : les pièces que le notaire attendra pour ce bien, celles qui manquent, et quoi faire pour chacune.</p>
+</div></header>
+<section class="outil"><div class="wrap"><h2 style="max-width:720px;margin:0 auto 18px;font-size:clamp(1.3rem,2.4vw,1.6rem)">Les cinq questions</h2><Tool /></div></section>
+<section class="recois"><div class="wrap" style="max-width:860px"><div class="art">
+  <h2>Sur quoi repose le résultat ?</h2>
+  <p>Sur la nature des travaux, leur date de fin, l'existence d'une autorisation, la personne qui les a réalisés et l'assurance souscrite. Ces cinq éléments déterminent quelles pièces existent, lesquelles sont exigibles et quels délais sont écoulés. Les règles appliquées sont celles du Code de l'urbanisme, du Code des assurances et du Code civil ; elles sont détaillées dans les <a href={L('/guides/')}>guides</a>.</p>
+  <h2>Quelles sont les limites du test ?</h2>
+  <p>Il ne connaît ni la surface exacte des travaux, ni le plan local d'urbanisme de votre commune. Il indique ce qui est habituellement exigé, pas ce que votre notaire décidera. Les diagnostics obligatoires et les règles de copropriété ou de lotissement ne sont pas couverts.</p>
+</div></div></section>
+<Faq title="Questions fréquentes sur le test" items={faq} />
+<section class="final" id="commencer"><div class="wrap">
+  <div><div class="lbl" style="color:var(--acc2)">Ouverture</div><h2 style="margin-top:12px" id="waitf-title">Le dossier complet du bien arrive.</h2><p>Les demandes envoyées en votre nom, vos pièces lues et classées, le dossier remis à votre notaire. Laissez un e-mail pour être prévenu.</p></div>
+  <WaitForm />
+</div></section>
+</Page>

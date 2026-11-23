@@ -1,0 +1,45 @@
+---
+import Page from '../layouts/Page.astro';
+import Faq from '../components/Faq.astro';
+import d from '../data/pages/index.json';
+import { L } from '../lib/links';
+const faq = [
+  { q: "Qui envoie les demandes à la mairie ?", a: "L'outil, en votre nom, depuis votre dossier, après votre validation. Personne chez l'éditeur n'intervient ni ne lit vos pièces." },
+  { q: "Combien de temps met une mairie à répondre ?", a: "Le délai légal de communication d'un document administratif est d'un mois. En pratique, de quelques jours à plusieurs semaines selon la commune. L'outil relance à quinze et trente jours." },
+  { q: "Faut-il créer un compte pour le test ?", a: "Non. Le test se fait sans compte ni e-mail, et le calcul se fait dans votre navigateur." },
+  { q: "L'outil remplace-t-il le notaire ?", a: "Non. Il réunit les pièces et signale ce qui manque. L'appréciation de la situation et la rédaction de l'acte reviennent au notaire." },
+  { q: "Que devient le dossier après la vente ?", a: "Il peut être remis à l'acquéreur : pièces, chronologie des travaux et garanties encore en cours avec leurs dates de fin." },
+];
+const ld = [
+  { '@type': 'HowTo', name: 'Réunir les pièces travaux avant la vente d\'une maison', step: d.comment.steps.map((s, i) => ({ '@type': 'HowToStep', position: i + 1, name: s.t, text: s.p })) },
+  { '@type': 'FAQPage', mainEntity: faq.map(i => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })) },
+];
+---
+<Page title="Comment ça marche — Conformité Travaux" description="Comment ça marche, du test gratuit au dossier remis au notaire : quatre étapes, ce que l'outil fait à votre place et ce qu'il ne fait pas." path="/comment-ca-marche/" ld={ld}>
+<header class="ph2"><div class="wrap" style="max-width:860px">
+  <nav class="crumb" aria-label="Fil d'Ariane"><a href={L('/')}>Accueil</a> › Comment ça marche</nav>
+  <h1>Comment ça marche : du test gratuit au dossier remis au notaire</h1>
+  <p class="sub" style="margin-top:16px">Quatre étapes, de l'adresse du bien au dossier remis au notaire. L'outil fait les démarches ; vous validez ce qui part et ce qu'il a compris.</p>
+</div></header>
+<section style="padding-block:clamp(28px,4vw,44px) 0"><div class="wrap" style="max-width:860px">
+  <div class="rep"><div class="lbl">La réponse courte</div><p>Conformité Travaux établit la liste des pièces exigées pour la vente d'un bien qui a eu des travaux, envoie en votre nom les demandes à la mairie, au Consuel et aux assureurs, lit et classe les réponses, puis remet le dossier au notaire. C'est un logiciel : aucun intermédiaire humain ne lit vos pièces.</p></div>
+</div></section>
+<section class="how" style="border-top:0"><div class="wrap">
+  <h2>Quelles sont les étapes ?</h2>
+  <div class="steps">{d.comment.steps.map((s, i) => <div class="st"><div class="n">0{i + 1}</div><h3 style="font-size:18px;margin-top:10px">{s.t}</h3><p>{s.p}</p></div>)}</div>
+</div></section>
+<section class="recois"><div class="wrap">
+  <h2>Que se passe-t-il une fois le dossier ouvert ?</h2>
+  <div class="tl2">{d.recois.items.map(i => <div><h3 class="h3c">{i.t}</h3><p>{i.p}</p></div>)}</div>
+</div></section>
+<section><div class="wrap">
+  <h2>Qui fait quoi : l'outil, vous, le notaire ?</h2>
+  <div class="tl2" style="grid-template-columns:repeat(3,1fr)">
+    <div><h3 class="h3c">L'outil</h3><p>Interroge les registres publics, rédige et envoie les demandes, relance, lit les pièces, tient le dossier à jour.</p></div>
+    <div><h3 class="h3c">Vous</h3><p>Répondez aux cinq questions, photographiez vos papiers, validez les envois et corrigez ce que l'outil a mal compris.</p></div>
+    <div><h3 class="h3c">Le notaire</h3><p>Apprécie la situation, informe l'acquéreur, rédige l'acte. L'outil ne donne pas de conseil juridique.</p></div>
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px"><a class="btn p" href={L('/test/')}>Faire le test gratuit</a><a class="btn s" href={L('/tarifs/')}>Voir les tarifs</a></div>
+</div></section>
+<Faq title="Questions fréquentes sur le fonctionnement" items={faq} />
+</Page>

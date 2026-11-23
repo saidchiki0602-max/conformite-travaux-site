@@ -1,0 +1,188 @@
+[
+  {
+    "slug": "vendeur",
+    "role": "Vendeur",
+    "offre": 0,
+    "title": "Vendre sa maison après des travaux : le dossier à préparer",
+    "description": "Vendre une maison après des travaux : la liste des pièces que le notaire demandera, ce qui manque et comment le régler avant le compromis.",
+    "lbl": "Pour le vendeur",
+    "h1": "Vous vendez une maison qui a eu des travaux : préparez le dossier avant le compromis.",
+    "chapo": "Extension, véranda, combles, piscine, électricité refaite : le notaire vous demandera des papiers pour chacun. Les réunir avant de signer le compromis ne coûte presque rien ; les chercher après coûte du temps, et souvent une part du prix.",
+    "reponse": "Pour vendre une maison qui a eu des travaux, le notaire demande l'autorisation d'urbanisme, la déclaration d'achèvement, les factures, les attestations d'assurance décennale des entreprises et, pour des travaux de moins de dix ans, l'assurance dommages-ouvrage. Le test gratuit donne la liste exacte pour votre maison en deux minutes.",
+    "pb": {
+      "h": "Pourquoi les travaux compliquent-ils une vente ?",
+      "items": [
+        [
+          "Les papiers datent de plusieurs années",
+          "Permis rangé on ne sait où, entreprise disparue, déclaration de fin de travaux jamais déposée : personne n'y pense avant qu'un notaire ne les réclame."
+        ],
+        [
+          "Le calendrier se referme après le compromis",
+          "Une régularisation prend d'un à quatre mois. Trois semaines avant la signature, il n'y a plus le temps : il reste le report ou la discussion sur le prix."
+        ],
+        [
+          "L'acquéreur le découvre de toute façon",
+          "La surface du diagnostic énergétique ne correspond pas à celle du cadastre. Sa banque ou son notaire posera la question."
+        ]
+      ]
+    },
+    "fait": {
+      "h": "Que fait Conformité Travaux pour un vendeur ?",
+      "items": [
+        "Il établit la liste des pièces attendues pour vos travaux, pas une liste générique",
+        "Il indique pour chaque pièce absente où la retrouver, ou comment la remplacer",
+        "Il prépare et envoie en votre nom les demandes à la mairie, au Consuel et aux assureurs",
+        "Il lit les papiers que vous photographiez, les date et les classe",
+        "Il remet un dossier complet à votre notaire ou à votre agent, en PDF ou par un lien"
+      ]
+    },
+    "guides": [
+      "vendre-maison-extension-sans-permis",
+      "declaration-achevement-daact-non-deposee",
+      "regulariser-construction-sans-permis"
+    ],
+    "faq": [
+      [
+        "Quand faut-il s'occuper du dossier travaux ?",
+        "Avant la mise en vente, ou au plus tard avant le compromis. Une régularisation demande d'un à quatre mois : après le compromis, le délai manque."
+      ],
+      [
+        "Dois-je tout déclarer à l'acquéreur ?",
+        "Oui. Vous êtes tenu d'une obligation d'information, et ce qui est écrit dans l'acte vous protège. Ce qui est caché se retourne contre le vendeur."
+      ],
+      [
+        "Et si je ne retrouve aucun papier ?",
+        "La mairie communique sur demande les autorisations délivrées sur votre parcelle, y compris aux propriétaires précédents. Les assureurs et le Consuel peuvent aussi rééditer leurs attestations."
+      ],
+      [
+        "Le test est-il vraiment gratuit ?",
+        "Oui, sans compte et sans e-mail. Vous ne laissez une adresse que si vous voulez recevoir la liste."
+      ]
+    ]
+  },
+  {
+    "slug": "agence-immobiliere",
+    "role": "Agent immobilier",
+    "offre": 1,
+    "title": "Agents immobiliers : vérifier les travaux avant le mandat",
+    "description": "Pré-contrôle des travaux d'un bien avant le mandat : écart de surface entre DPE et cadastre, autorisations manquantes, questions à poser au vendeur.",
+    "lbl": "Pour l'agence immobilière",
+    "h1": "Agents immobiliers : savoir ce qui manque au dossier travaux avant de signer le mandat.",
+    "chapo": "Un bien dont l'extension n'a jamais été déclarée se vend comme les autres, jusqu'au jour où le notaire s'en aperçoit. Le vérifier avant le mandat change la conversation avec le vendeur, et protège la vente.",
+    "reponse": "Avant de signer un mandat, un agent immobilier peut vérifier les travaux d'un bien en comparant la surface du diagnostic de performance énergétique à celle du cadastre, puis en demandant au vendeur les autorisations et les assurances correspondantes. Conformité Travaux prépare ce pré-contrôle et la liste des questions à poser en rendez-vous.",
+    "pb": {
+      "h": "Pourquoi vérifier les travaux avant le mandat ?",
+      "items": [
+        [
+          "Une vente qui cale tard coûte cher",
+          "Un dossier travaux incomplet découvert à l'étude, c'est un report, une renégociation, parfois un acquéreur qui se retire. Le mandat est signé, le travail est fait, la vente attend."
+        ],
+        [
+          "Le vendeur ne sait pas ce qu'il lui manque",
+          "Il ne vous cache rien : il ignore qu'une véranda se déclare ou qu'une fin de travaux se dépose. C'est à vous de poser la question, au bon moment."
+        ],
+        [
+          "Le prix annoncé repose sur la surface",
+          "Si une partie de la surface n'a pas d'existence administrative, mieux vaut le savoir avant de publier l'annonce."
+        ]
+      ]
+    },
+    "fait": {
+      "h": "Que fait Conformité Travaux pour une agence ?",
+      "items": [
+        "Pré-contrôle d'un bien à partir de l'adresse ou du diagnostic énergétique",
+        "Alerte quand la surface du diagnostic dépasse celle du cadastre",
+        "Liste des questions à poser au vendeur en rendez-vous, à imprimer",
+        "Envoi au vendeur des cinq questions, réponses réunies dans le dossier du bien",
+        "Transmission du dossier à l'étude au compromis : le notaire ne recommence rien",
+        "Chaque négociateur voit son portefeuille ; la direction voit l'agence"
+      ]
+    },
+    "guides": [
+      "acheter-maison-travaux-non-declares",
+      "surface-non-declaree-taxe-fonciere",
+      "vendre-maison-extension-sans-permis"
+    ],
+    "faq": [
+      [
+        "L'agent immobilier est-il responsable des travaux non déclarés ?",
+        "Il est tenu d'un devoir de conseil et de vérification des éléments apparents du bien. Poser la question au vendeur et en garder la trace relève de ce devoir."
+      ],
+      [
+        "Peut-on essayer sur un bien dès maintenant ?",
+        "Oui : le test gratuit fonctionne pour un professionnel. Choisissez « Agent immobilier » au début, le résultat est rédigé pour être remis au vendeur."
+      ],
+      [
+        "Combien de négociateurs par abonnement ?",
+        "Jusqu'à cinq, chacun avec son portefeuille. Au-delà, le tarif est établi avec vous."
+      ],
+      [
+        "Le dossier peut-il être transmis à n'importe quelle étude ?",
+        "Oui, par un lien ou en PDF. Une étude équipée le retrouve directement dans ses dossiers."
+      ]
+    ]
+  },
+  {
+    "slug": "notaire",
+    "role": "Notaire ou clerc",
+    "offre": 2,
+    "title": "Notaires : réunir les pièces travaux d'une vente",
+    "description": "Pour les études notariales : repérer les ventes concernées par des travaux, demander les pièces au vendeur et à la mairie, préparer la note pour l'acte.",
+    "lbl": "Pour l'étude notariale",
+    "h1": "Notaires : les pièces travaux de chaque vente, réunies avant la signature.",
+    "chapo": "Permis, déclaration d'achèvement, dommages-ouvrage, attestations décennales : la collecte est longue, dépend du vendeur, et se termine souvent par une relance la veille de l'acte. L'outil s'en charge, sous votre contrôle.",
+    "reponse": "Conformité Travaux aide une étude notariale à repérer les ventes concernées par des travaux, à demander les pièces au vendeur par un simple lien, à interroger la mairie et les assureurs, et à préparer une note pour l'acte que le notaire relit et valide. Rien n'est envoyé à un tiers sans validation humaine.",
+    "pb": {
+      "h": "Pourquoi les pièces travaux retardent-elles les actes ?",
+      "items": [
+        [
+          "Le vendeur répond mal aux questionnaires",
+          "Il coche « pas de travaux » pour une véranda posée il y a huit ans, de bonne foi. L'information arrive tard, par l'acquéreur ou par le diagnostic."
+        ],
+        [
+          "La collecte repose sur les clercs",
+          "Courrier à la mairie, relance du vendeur, attestation d'assurance à faire confirmer : du temps passé sur chaque dossier, pour un résultat incertain."
+        ],
+        [
+          "Le devoir d'information ne se délègue pas",
+          "Ce que l'acte ne dit pas engage l'étude. Encore faut-il avoir eu les pièces à temps pour l'écrire."
+        ]
+      ]
+    },
+    "fait": {
+      "h": "Que fait Conformité Travaux pour une étude ?",
+      "items": [
+        "Création des dossiers à partir des compromis reçus : l'étude confirme, corrige ou écarte",
+        "Lien de dépôt pour le vendeur, sans compte ni mot de passe, avec relances",
+        "Demandes à la mairie, au Consuel et aux assureurs, envoyées après validation",
+        "Lecture des pièces : dates, entreprises, cohérence des attestations avec les travaux",
+        "Note pour l'acte et proposition de clause, toujours relues par un notaire",
+        "Remise du dossier à l'acquéreur après la signature",
+        "Droits par rôle, journal d'accès par dossier, hébergement en France"
+      ]
+    },
+    "guides": [
+      "declaration-achevement-daact-non-deposee",
+      "regulariser-construction-sans-permis",
+      "vendre-maison-construite-soi-meme"
+    ],
+    "faq": [
+      [
+        "L'outil rédige-t-il l'acte ?",
+        "Non. Il prépare une note et propose une rédaction que le notaire relit, modifie et valide. L'appréciation reste celle de l'étude."
+      ],
+      [
+        "Qui peut voir les dossiers ?",
+        "Chaque clerc voit ses dossiers, les notaires voient ceux de l'étude. Chaque consultation est journalisée."
+      ],
+      [
+        "Le coût peut-il être refacturé ?",
+        "Cela relève de l'appréciation de l'étude et des règles applicables à ses frais et débours."
+      ],
+      [
+        "Quand l'offre étude ouvre-t-elle ?",
+        "Elle n'est pas encore ouverte. Laissez un e-mail : les premières études sont contactées avant l'ouverture."
+      ]
+    ]
+  }
+]

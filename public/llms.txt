@@ -1,0 +1,39 @@
+# Conformité Travaux
+
+> Outil en ligne qui établit, pour un bien immobilier ayant fait l'objet de travaux, la liste des pièces exigées pour la vente (autorisation d'urbanisme, déclaration d'achèvement, assurance dommages-ouvrage, attestations décennales, Consuel, déclaration de surface), ce qui manque, la conséquence sur l'acte et le chemin de régularisation. Édité par Kaërt Groupe SAS (Québriac, Bretagne).
+
+## Ce que le service fait
+- Test gratuit en cinq questions, sans compte : la liste des pièces pour ce bien, les pièces bloquantes, le délai et le coût de chaque régularisation.
+- Dossier complet du bien (49 €, à l'ouverture) : demandes envoyées en nom propre à la mairie, au Consuel et aux assureurs, lecture et classement des pièces déposées, formulaire de régularisation prérempli, dossier PDF pour le notaire.
+- Agence immobilière (79 € HT/mois ou 19 € par bien, à l'ouverture) : pré-contrôle d'un bien avant la signature du mandat, alerte sur les écarts de surface entre DPE et cadastre.
+- Étude notariale (149 € HT/mois ou 29 € par dossier, à l'ouverture) : création automatique des dossiers depuis la boîte mail de l'étude, demandes et relances, note pour l'acte, remise du dossier à l'acquéreur après la signature.
+
+## Ce que le service n'est pas
+- Ce n'est pas une consultation juridique et cela ne remplace pas le notaire chargé de la vente.
+- Personne chez l'éditeur ne lit les pièces des utilisateurs : les demandes partent au nom de l'utilisateur, les réponses lui reviennent.
+
+## Pages
+- / : présentation
+- /test/ : test gratuit en cinq questions
+- /vendeur/ : pour le vendeur d'une maison ayant eu des travaux
+- /agence-immobiliere/ : pré-contrôle avant mandat pour les agents immobiliers
+- /notaire/ : collecte des pièces et note pour l'acte pour les études notariales
+- /tarifs/ : tarifs
+- /comment-ca-marche/ : fonctionnement en quatre étapes
+- /guides/ : guides par situation
+- /guides/vendre-maison-extension-sans-permis/ : Vendre une maison avec une extension sans permis
+- /guides/declaration-achevement-daact-non-deposee/ : Déclaration d'achèvement de travaux non déposée
+- /guides/veranda-piscine-non-declaree-vente/ : Véranda ou piscine non déclarée : vendre la maison
+- /guides/regulariser-construction-sans-permis/ : Régulariser une construction sans permis
+- /guides/acheter-maison-travaux-non-declares/ : Acheter une maison avec des travaux non déclarés
+- /guides/surface-non-declaree-taxe-fonciere/ : Surface non déclarée : taxe foncière et vente
+- /guides/garage-transforme-en-chambre-sans-declaration/ : Garage transformé en chambre sans déclaration
+- /guides/combles-amenages-sans-declaration/ : Combles aménagés sans déclaration et vente
+- /guides/abri-de-jardin-sans-autorisation/ : Abri de jardin sans autorisation et vente
+- /guides/piscine-non-declaree-vente-maison/ : Piscine non déclarée : vendre la maison
+- /guides/fenetres-facade-modifiees-sans-declaration/ : Fenêtres ou façade modifiées sans déclaration
+- /guides/vendre-maison-construite-soi-meme/ : Vendre une maison construite soi-même
+- /lexique/ : lexique de 22 termes (DAACT, décennale, dommages-ouvrage, PLU…)
+- /mentions-legales/ et /confidentialite/
+
+Contact : contact@kaertgroupe.com

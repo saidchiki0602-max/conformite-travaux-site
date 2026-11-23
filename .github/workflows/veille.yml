@@ -1,0 +1,29 @@
+# Veille hebdomadaire : repasse la grille de contrôle qualité sur le site EN LIGNE.
+# S'il y a un critère non validé, ouvre (ou met à jour) un ticket avec le rapport. Sinon, ne dit rien.
+name: Veille qualité (site en ligne)
+on:
+  schedule:
+    - cron: '17 6 * * 1'   # chaque lundi matin
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  veille:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Contrôle du site en ligne
+        id: audit
+        run: |
+          python3 -I scripts/audit-live.py "https://$(cat public/CNAME)" | tee rapport.txt
+          echo "ko=$(grep -c '^  ✗' rapport.txt || true)" >> "$GITHUB_OUTPUT"
+      - name: Ouvrir ou mettre à jour le ticket
+        if: steps.audit.outputs.ko != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          { echo "Contrôle automatique du $(date +%d/%m/%Y) : **${{ steps.audit.outputs.ko }} critère(s) non validé(s)**."; echo; echo '```'; cat rapport.txt; echo '```'; } > corps.md
+          n=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open --search "Veille qualité in:title" --json number --jq '.[0].number')
+          if [ -n "$n" ]; then gh issue comment "$n" --repo "$GITHUB_REPOSITORY" --body-file corps.md
+          else gh issue create --repo "$GITHUB_REPOSITORY" --title "Veille qualité : critères non validés" --body-file corps.md; fi

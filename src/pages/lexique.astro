@@ -1,0 +1,21 @@
+---
+import Page from '../layouts/Page.astro';
+import lex from '../data/lexique.json';
+import { L } from '../lib/links';
+const site = Astro.site?.href.replace(/\/$/, '') ?? '';
+const slug = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const termes = [...lex.termes].sort((a, b) => a.t.localeCompare(b.t, 'fr'));
+const ld = [{ '@type': 'DefinedTermSet', name: 'Lexique des travaux et de la vente immobilière', url: site + '/lexique/',
+  hasDefinedTerm: termes.map(t => ({ '@type': 'DefinedTerm', name: t.t, description: t.d, url: site + '/lexique/#' + slug(t.t) })) }];
+---
+<Page title="Lexique travaux et vente : DAACT, décennale, PLU…" description="Lexique des travaux et de la vente d'une maison : DAACT, garantie décennale, dommages-ouvrage, déclaration préalable, PLU, Consuel, récolement." path="/lexique/" ld={ld}>
+<header class="ph2"><div class="wrap" style="max-width:860px">
+  <nav class="crumb" aria-label="Fil d'Ariane"><a href={L('/')}>Accueil</a> › Lexique</nav>
+  <h1>Lexique des travaux et de la vente d'une maison</h1>
+  <p class="sub" style="margin-top:16px">{termes.length} termes que vous entendrez chez le notaire ou en mairie, chacun expliqué en quelques lignes, sans jargon.</p>
+</div></header>
+<section><div class="wrap">
+  <div class="lex">{termes.map(t => <div id={slug(t.t)}><h2>{t.t.charAt(0).toUpperCase() + t.t.slice(1)}</h2><p>{t.d}</p>{t.v.length > 0 && <small>On dit aussi : {t.v.join(', ')}</small>}</div>)}</div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px"><a class="btn p" href={L('/test/')}>Faire le test gratuit</a><a class="btn s" href={L('/guides/')}>Lire les guides</a></div>
+</div></section>
+</Page>

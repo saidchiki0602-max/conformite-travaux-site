@@ -1,0 +1,107 @@
+---
+import Page from '../layouts/Page.astro';
+import Faq from '../components/Faq.astro';
+import Tool from '../components/Tool.astro';
+import WaitForm from '../components/WaitForm.astro';
+import d from '../data/pages/index.json';
+import { L } from '../lib/links';
+const faqLd = { '@type': 'FAQPage', mainEntity: d.faq.items.map(i => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })) };
+---
+<Page title={d.title} description={d.description} path={d.path} ld={[faqLd]}>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <div class="lbl">{d.hero.who}</div>
+    <h1 style="margin-top:14px">{d.hero.h1}</h1>
+    <p>{d.hero.sub}</p>
+    <div class="cta"><a class="btn w" href={L('/#outil')}>{d.hero.cta}</a><a class="btn gh" href={L('/#pourqui')}>{d.hero.cta2}</a></div>
+    <div class="fine" set:html={d.hero.fine} />
+  </div>
+  <div class="ph" aria-hidden="true">
+    <div class="sc"><div class="ring" style="--v:45;--c:var(--ko)"><b>5/11</b></div><div><b class="phh">Pas prêt pour le 20 novembre</b><p>2 pièces bloquantes · 3 à obtenir · 1 non exigible</p></div></div>
+    <div class="pc ko"><b>DAACT de l'extension 2016</b><span class="tag ko">Bloquant</span><small>Permis retrouvé en mairie, mais la conformité n'a jamais été constatée.</small></div>
+    <div class="pc ko"><b>Dommages-ouvrage</b><span class="tag ko">À déclarer</span><small>Moins de 10 ans : risque non assuré transmis à l'acquéreur.</small></div>
+    <div class="pc warn"><b>Décennale du charpentier</b><span class="tag warn">Douteuse</span><small>Datée 2014 pour des travaux de 2016.</small></div>
+    <div class="pc ok"><b>Permis de construire</b><span class="tag ok">Retrouvé</span></div>
+  </div>
+</div></header>
+
+<aside class="probar"><div class="wrap">
+  <div><b>{d.probar.q}</b><span>{d.probar.a}</span></div>
+  <a class="btn s" href={L('/#pourqui')}>{d.probar.cta}</a>
+</div></aside>
+
+<section class="outil" id="outil"><div class="wrap">
+  <div class="head">
+    <div><div class="lbl">{d.outil.lbl}</div><h2 style="margin-top:12px">{d.outil.h2}</h2></div>
+    <p class="sub">{d.outil.sub}</p>
+  </div>
+  <Tool />
+</div></section>
+
+<section class="recois"><div class="wrap">
+  <div class="lbl">{d.recois.lbl}</div>
+  <h2 style="margin-top:12px">{d.recois.h2}</h2>
+  <p class="sub" style="margin-top:14px">{d.recois.sub}</p>
+  <div class="tl2">{d.recois.items.map(i => <div><b>{i.t}</b><p>{i.p}</p></div>)}</div>
+  <p class="note2">{d.recois.note}</p>
+</div></section>
+
+<section class="who" id="pourqui"><div class="wrap">
+  <div class="lbl">{d.pourqui.lbl}</div>
+  <h2 style="margin-top:12px">{d.pourqui.h2}</h2>
+  <p class="sub" style="margin-top:14px">{d.pourqui.sub}</p>
+  <div class="g">
+    {d.pourqui.offres.map(o => (
+      <div class={'card' + (o.feat ? ' feat' : '')}>
+        <div class="lbl">{o.who}</div><h3>{o.t}</h3>
+        <div class="pr">{o.pr}<span>{o.unit}</span></div>
+        <ul>{o.items.map(i => <li><i>§</i>{i}</li>)}</ul>
+        <a class={'btn ' + (o.feat ? 'p' : 's')} href={L('/#commencer')} data-role={o.role}>{o.cta}</a>
+        <div class="note">{o.note}</div>
+        <div class="note"><a href={L(o.page)} style="color:var(--acc);font-weight:700">En savoir plus →</a></div>
+      </div>
+    ))}
+  </div>
+</div></section>
+
+<section class="how" id="comment"><div class="wrap">
+  <div class="lbl">{d.comment.lbl}</div>
+  <h2 style="margin-top:12px">{d.comment.h2}</h2>
+  <div class="steps">
+    {d.comment.steps.map((s, i) => <div class="st"><div class="n">0{i + 1}</div><b>{s.t}</b><p>{s.p}</p></div>)}
+  </div>
+  <div class="claim">{d.comment.claims.map(c => <div><b>{c.t}</b><p>{c.p}</p></div>)}</div>
+  <p class="sub" style="margin-top:22px"><a href={L('/comment-ca-marche/')} style="color:var(--acc);font-weight:700">Le fonctionnement en détail →</a></p>
+</div></section>
+
+<section class="gloss"><div class="wrap">
+  <div class="lbl">{d.gloss.lbl}</div>
+  <h2 style="margin-top:12px">{d.gloss.h2}</h2>
+  <p class="sub" style="margin-top:14px">{d.gloss.sub}</p>
+  <div class="g">{d.gloss.items.map(i => <div class="gi"><b>{i.t}</b><p>{i.p}</p></div>)}</div>
+  <p class="sub" style="margin-top:22px"><a href={L('/lexique/')} style="color:var(--acc);font-weight:700">Tout le lexique →</a></p>
+</div></section>
+
+<section class="verif"><div class="wrap">
+  <div class="lbl">{d.verif.lbl}</div>
+  <h2 style="margin-top:12px">{d.verif.h2}</h2>
+  <div class="g">
+    {d.verif.items.map(i => <div class="vi" style={i.hl ? 'background:var(--accl)' : ''}><b style={i.hl ? 'color:var(--acc)' : ''}>{i.t}</b><p>{i.p}</p></div>)}
+  </div>
+  <p class="sub" style="margin-top:26px">Un cas précis ? <a href={L('/guides/')} style="color:var(--acc);font-weight:700">Les guides</a> détaillent les situations les plus fréquentes : extension sans permis, déclaration d'achèvement jamais déposée, véranda ou piscine non déclarée.</p>
+</div></section>
+
+<Faq title={d.faq.title} items={d.faq.items} />
+
+<section class="final" id="commencer"><div class="wrap">
+  <div>
+    <div class="lbl" style="color:var(--acc2)">{d.final.lbl}</div>
+    <h2 style="margin-top:12px" id="waitf-title">{d.final.h2}</h2>
+    <p>{d.final.p}</p>
+    <p style="margin-top:22px;font-size:14px;color:rgba(255,255,255,.5)">{d.final.p2}</p>
+  </div>
+  <WaitForm />
+</div></section>
+
+</Page>

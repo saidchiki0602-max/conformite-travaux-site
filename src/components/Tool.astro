@@ -1,0 +1,65 @@
+---
+// L'outil gratuit : 5 questions, puis le résultat construit par src/data/pieces.mjs.
+// Les questions vivent dans src/data/questions.json ; les règles et les textes juridiques dans pieces.mjs.
+import questions from '../data/questions.json';
+import guides from '../data/guides.json';
+import { L } from '../lib/links';
+const GUIDES = Object.fromEntries(guides.map(g => [g.slug, L('/guides/' + g.slug + '/')]));
+const engine = await import('../data/pieces.mjs?raw').then(m => m.default);
+const client = await import('./tool.client.js?raw').then(m => m.default);
+const script = engine.replace(/^export function/gm, 'function') + '\n' + client;
+---
+<div class="tool" id="tool">
+  <div class="mode" id="mode" role="group" aria-label="Vous êtes">
+    <button type="button" class="on" data-m="vendeur" data-role="Je vends ma maison">Je vends ma maison</button>
+    <button type="button" data-m="agent" data-role="Je suis agent immobilier">Agent immobilier</button>
+    <button type="button" data-m="notaire" data-role="Je suis notaire ou clerc">Notaire ou clerc</button>
+  </div>
+  <div class="prog" id="prog">{questions.map((_, i) => <i class={i === 0 ? 'on' : ''} />)}</div>
+
+  {questions.map((q, i) => (
+    <div class="q" data-q={i + 1} hidden={i > 0}>
+      <div class="n">Question {i + 1} / {questions.length}</div>
+      <h3>{q.q}</h3>
+      <p class="help">{q.help}</p>
+      <div class="opts" data-key={q.key}>
+        {q.opts.map(o => (
+          <button class="opt" data-v={o.v}><span>{o.t}{o.s && <small>{o.s}</small>}</span><span class="k"></span></button>
+        ))}
+      </div>
+    </div>
+  ))}
+
+  <div class="qnav noprint"><button class="lnk" id="prev" hidden>← Précédent</button><span></span><button class="btn p" id="next" disabled>Suivant</button></div>
+
+  <div class="res" id="res">
+    <div class="pronote" id="pronote" hidden></div>
+    <div class="score" id="score"><div class="ring" id="ring"><b id="ringv">0/0</b></div><div><h3 id="rtitle"></h3><p id="rsub"></p></div></div>
+    <div class="sec"><h3 class="h4like">Pièces attendues pour ce bien</h3><span id="rcount"></span></div>
+    <div id="pieces"></div>
+    <div class="law" id="law"></div>
+    <div class="acts" id="acts"><div class="h">Par quoi commencer</div><ol id="actl"></ol></div>
+    <p class="fine" style="margin-top:14px">Hors périmètre de ce test : les diagnostics obligatoires (DPE, amiante, plomb, électricité, gaz, termites, ERP, assainissement), qui s'ajoutent quoi qu'il arrive ; et, en lotissement ou en copropriété, l'accord de l'assemblée ou le respect du cahier des charges, que le notaire vérifiera aussi. Ce résultat est une information sur les pièces usuellement exigées ; l'appréciation finale appartient au notaire.</p>
+
+    <div class="mail noprint" id="mailbox">
+      <div class="lbl">L'étape suivante</div>
+      <b>Recevez cette liste, et gardez-la sous la main</b>
+      <p class="fine" style="margin-top:6px">Le détail de chaque pièce et son chemin de régularisation, en PDF. C'est ce que vous montrerez à votre notaire ou à votre agent. Rien d'autre, pas de relance commerciale.</p>
+      <form id="mailf" novalidate>
+        <div class="row">
+          <select name="role"><option>Je vends ma maison</option><option>Je suis agent immobilier</option><option>Je suis notaire ou clerc</option><option>Autre</option></select>
+          <input name="contact" type="email" placeholder="vous@exemple.fr" required autocomplete="email">
+          <button class="btn p" type="submit" style="padding:14px 22px">Recevoir ma liste</button>
+        </div>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+        <div class="ok" data-ok hidden>C'est envoyé. Regardez vos indésirables si rien n'arrive dans cinq minutes.</div>
+        <div class="err" data-err hidden></div>
+      </form>
+      <p class="after">Vous préférez qu'on s'occupe des démarches — mairie, Consuel, assureurs — et qu'on vous rende le dossier classé&nbsp;? <a href="#commencer" data-role="Vendeur">Le dossier complet du bien, 49 €, à l'ouverture →</a></p>
+    </div>
+
+    <div class="qnav noprint" style="justify-content:center;gap:18px"><button class="lnk" id="again">↺ Refaire le test pour d'autres travaux</button><button class="lnk" id="print">⎙ Imprimer / PDF</button></div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ GUIDES, FORM_ENDPOINT: import.meta.env.PUBLIC_FORM_ENDPOINT ?? '', FORM_ANON: import.meta.env.PUBLIC_SUPABASE_ANON ?? '' }} set:html={script} />

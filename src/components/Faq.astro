@@ -1,0 +1,11 @@
+---
+// FAQ + balisage FAQPage (le JSON-LD est ajouté par la page, qui passe les mêmes items à Base).
+interface Props { title: string; intro?: string; items: { q: string; a: string }[] }
+const { title, intro, items } = Astro.props;
+---
+<section class="faq" id="faq"><div class="wrap" style="max-width:860px">
+  <div class="lbl">Questions fréquentes</div>
+  <h2 style="margin-top:12px;margin-bottom:20px">{title}</h2>
+  {intro && <p class="sub" style="margin-bottom:18px">{intro}</p>}
+  {items.map(i => <details><summary>{i.q}</summary><p set:html={i.a} /></details>)}
+</div></section>

@@ -1,0 +1,263 @@
+{
+  "title": "Pièces travaux pour vendre une maison — Conformité Travaux",
+  "description": "Les pièces travaux exigées pour la vente d'une maison — permis, achèvement, assurances — ce qui manque et comment régulariser. Test gratuit.",
+  "path": "/",
+  "hero": {
+    "who": "Vendeurs · agents immobiliers · notaires",
+    "h1": "Vendre une maison avec des travaux : les pièces que le notaire va exiger, trouvées avant la signature.",
+    "sub": "Extension, véranda, piscine, électricité refaite, maison construite soi-même : le notaire va demander des papiers que personne n'a préparés. Cinq questions, et vous savez lesquels, ce que leur absence coûte, et comment régulariser à temps.",
+    "cta": "Faire le test gratuit",
+    "cta2": "Pour les agences et les études",
+    "fine": "Sans compte · 2 minutes · <b>fondé sur le Code de l'urbanisme et le Code des assurances</b>, pas sur des généralités"
+  },
+  "outil": {
+    "lbl": "Outil gratuit",
+    "h2": "Test gratuit : votre dossier travaux est-il complet pour la vente ?",
+    "sub": "Cinq questions sur les travaux faits dans la maison. En retour : la liste des pièces que le notaire attendra pour ce bien, celles qui bloquent, celles qu'on peut retrouver, et le chemin pour chacune."
+  },
+  "pourqui": {
+    "lbl": "Pour qui",
+    "h2": "Vendeur, agent immobilier, notaire : le même dossier travaux.",
+    "sub": "Un dossier par bien. L'agent le commence avant le mandat, le vendeur le complète, le notaire le reçoit prêt pour l'acte. Personne ne ressaisit, et l'acquéreur hérite du carnet à la fin. Aucune de ces trois offres n'est encore ouverte : vous laissez un e-mail, on vous prévient.",
+    "offres": [
+      {
+        "who": "Vendeur",
+        "t": "Vendre sans surprise chez le notaire",
+        "pr": "49 €",
+        "unit": " · une fois, pour ce bien",
+        "feat": true,
+        "cta": "Être prévenu à l'ouverture",
+        "note": "Ouverture prévue en janvier. Le test, lui, est disponible maintenant et vous garde votre liste.",
+        "items": [
+          "La liste exacte des pièces pour vos travaux, et où chacune se trouve probablement",
+          "Les demandes à la mairie, au Consuel et aux assureurs, préparées et envoyées en votre nom depuis votre dossier",
+          "Vous photographiez vos papiers, l'outil les lit, les date, les classe",
+          "La DP ou la DAACT de régularisation préremplie, prête à déposer",
+          "Le dossier en PDF pour votre notaire ou votre agent — ou un lien direct"
+        ],
+        "role": "Vendeur",
+        "page": "/vendeur/"
+      },
+      {
+        "who": "Agence immobilière",
+        "t": "Le savoir avant de signer le mandat",
+        "pr": "79 €",
+        "unit": " HT / mois · ou 19 € par bien",
+        "cta": "Être prévenu à l'ouverture",
+        "note": "Jusqu'à 5 négociateurs. Ouverture prévue en janvier ; les premières agences sont prises en test avant.",
+        "items": [
+          "Pré-contrôle en 30 secondes : adresse ou DPE, croisés avec le cadastre et les autorisations connues",
+          "Alerte quand le DPE annonce plus de surface que le cadastre",
+          "La page à remettre au vendeur en rendez-vous — un argument de mandat",
+          "Les 5 questions envoyées au vendeur par SMS, les réponses dans votre dossier",
+          "Transmission à l'étude au compromis : le notaire gagne 2 à 3 semaines"
+        ],
+        "role": "Agent immobilier",
+        "page": "/agence-immobiliere/"
+      },
+      {
+        "who": "Étude notariale",
+        "t": "Zéro dossier travaux oublié",
+        "pr": "149 €",
+        "unit": " HT / mois · ou 29 € par dossier",
+        "cta": "Être prévenu à l'ouverture",
+        "note": "Droits par rôle, journal d'accès par dossier, hébergement en France.",
+        "items": [
+          "Connectez la boîte de l'étude : chaque compromis qui arrive crée son dossier, vous confirmez",
+          "Demandes au vendeur sans compte ni mot de passe, relances automatiques",
+          "Courriers mairie, Consuel, assureurs : envoyés depuis le dossier, réponses classées",
+          "Note pour l'acte prête à relire, clause suggérée, version acquéreur",
+          "Remise du carnet à l'acquéreur après signature"
+        ],
+        "role": "Notaire ou clerc",
+        "page": "/notaire/"
+      }
+    ]
+  },
+  "comment": {
+    "lbl": "Comment ça marche",
+    "h2": "Comment ça marche : l'outil fait les démarches, vous gardez la main.",
+    "steps": [
+      {
+        "t": "L'adresse, ou cinq questions",
+        "p": "Cadastre, photos aériennes, autorisations connues (Sitadel), PLU : l'outil fait le tour des registres publics et repère ce qui a changé."
+      },
+      {
+        "t": "La liste des pièces, pour ce bien",
+        "p": "Pas une liste générique : celle qui découle de la nature des travaux, de leur date, de qui les a faits. Avec le chemin pour chaque pièce absente."
+      },
+      {
+        "t": "Les demandes partent en votre nom",
+        "p": "Mairie, Consuel, assureurs : le courrier est prêt, vous validez, il part depuis votre dossier. Les réponses y reviennent, lues et classées."
+      },
+      {
+        "t": "Le dossier, classé, pour l'acte",
+        "p": "Chronologie des travaux, pièces, garanties en cours avec leurs dates. Le notaire reçoit un dossier, pas une boîte à chaussures."
+      }
+    ],
+    "claims": [
+      {
+        "t": "C'est un logiciel, pas un cabinet",
+        "p": "Personne chez Kaërt ne lit vos pièces, vos mails, ni les réponses de votre mairie. Les courriers partent à votre nom depuis votre dossier, les réponses y reviennent, et c'est vous qui validez ce que l'outil en a compris. Aucun intermédiaire humain, à aucun moment."
+      },
+      {
+        "t": "Ce qu'il ne fait pas",
+        "p": "Il ne remplace pas l'appréciation du notaire, ne rédige pas l'acte, ne donne pas de conseil juridique. Il dit ce qui est attendu, ce qui manque, et ce que la loi prévoit pour régulariser."
+      }
+    ]
+  },
+  "verif": {
+    "lbl": "Ce que l'outil vérifie",
+    "h2": "Les onze pièces travaux vérifiées, et la règle derrière chacune.",
+    "items": [
+      {
+        "t": "Autorisation d'urbanisme",
+        "p": "Permis ou déclaration préalable, selon surface et nature. Prescriptions : pénale 6 ans, civile 10 ans (art. L480-4, L480-13 C. urb.)."
+      },
+      {
+        "t": "DAACT et non-contestation",
+        "p": "Déclaration d'achèvement, délai de récolement de 3 mois (5 en secteur protégé), attestation sur demande (art. L462-1, R462-1 à 10)."
+      },
+      {
+        "t": "Dommages-ouvrage",
+        "p": "Obligatoire avant ouverture du chantier pour les travaux de construction, mention à l'acte si absente (art. L242-1 C. assurances)."
+      },
+      {
+        "t": "Décennales des entreprises",
+        "p": "Valables à la date d'ouverture du chantier, couvrant l'activité réalisée. Vérifiées auprès de l'assureur, pas seulement lues."
+      },
+      {
+        "t": "Factures et PV de réception",
+        "p": "Datent les travaux, fixent le point de départ des garanties, servent à la plus-value."
+      },
+      {
+        "t": "RT2012 / RE2020",
+        "p": "Attestation de prise en compte à l'achèvement pour les constructions neuves et certaines extensions."
+      },
+      {
+        "t": "Consuel",
+        "p": "Attestation de conformité électrique si l'installation a été refaite ou créée."
+      },
+      {
+        "t": "Taxe d'aménagement et déclaration foncière",
+        "p": "Surface créée déclarée au fisc dans les 90 jours (H1 / IL). Sinon, redressement possible pour le propriétaire suivant."
+      },
+      {
+        "t": "Sécurité piscine",
+        "p": "Dispositif normalisé (barrière, alarme, couverture, abri) et attestation de conformité, exigés à la vente."
+      },
+      {
+        "t": "Auto-construction",
+        "p": "Celui qui construit pour lui-même est constructeur : responsabilité décennale personnelle envers l'acquéreur (art. 1792-1 C. civ.)."
+      },
+      {
+        "t": "CCMI et garantie de livraison",
+        "p": "Pour une maison récente : contrat, garantie de livraison, PV de réception et levée des réserves."
+      },
+      {
+        "t": "Conformité au PLU actuel",
+        "p": "La question qui décide si une régularisation est possible : emprise, hauteur, reculs, aspect. Vérifiée sur le PLU en vigueur, pas celui de l'époque.",
+        "hl": true
+      }
+    ]
+  },
+  "final": {
+    "lbl": "Ouverture",
+    "h2": "Le test est ouvert. Le dossier complet arrive.",
+    "p": "Laissez un e-mail : vous êtes prévenu le jour où le dossier à 49 € ouvre, et avant tout le monde pour les agences et les études. Un message à l'ouverture, pas de relance.",
+    "p2": "Conformité Travaux fait partie de la suite Kaërt pour le bâtiment, avec Kōv, MOEpilote et MonChantier. Un dossier commencé dans l'une se retrouve dans les autres."
+  },
+  "faq": {
+    "title": "Travaux non déclarés et vente d'une maison : les questions fréquentes.",
+    "items": [
+      {
+        "q": "Quelles pièces travaux un notaire demande-t-il pour une vente ?",
+        "a": "Selon les travaux : autorisation d'urbanisme (permis ou déclaration préalable), déclaration d'achèvement et attestation de non-contestation, attestation d'assurance dommages-ouvrage, attestations décennales des entreprises valables à la date des travaux, factures, PV de réception, attestation RT2012 ou RE2020 pour les constructions récentes, attestation Consuel si l'électricité a été refaite. Le test ci-dessus donne la liste pour votre cas."
+      },
+      {
+        "q": "Peut-on vendre une maison avec une extension sans permis ?",
+        "a": "Oui, la vente n'est pas interdite, mais le notaire doit en informer l'acquéreur et le mentionner dans l'acte. Si l'extension a moins de dix ans, une régularisation est fortement conseillée avant le compromis : permis ou déclaration préalable de régularisation si elle respecte le PLU actuel. Au-delà de dix ans, les poursuites sont prescrites, mais l'infraction reste : la mairie peut exiger la régularisation de l'existant le jour d'une future demande de travaux si les travaux relevaient d'un permis de construire."
+      },
+      {
+        "q": "Que se passe-t-il s'il manque la déclaration d'achèvement (DAACT) ?",
+        "a": "La conformité des travaux n'a jamais été constatée par la mairie. Le vendeur peut la déposer tardivement : la mairie a trois mois pour contester (cinq en secteur protégé), puis délivre sur demande une attestation de non-contestation. En attendant, le notaire peut signer avec une clause d'information, parfois une somme séquestrée jusqu'à l'attestation."
+      },
+      {
+        "q": "L'absence d'assurance dommages-ouvrage empêche-t-elle la vente ?",
+        "a": "Non. Mais pour des travaux de moins de dix ans, le notaire doit la mentionner dans l'acte et informer l'acquéreur, qui hérite d'un risque non assuré jusqu'à la fin de la décennale. En pratique, c'est un point de négociation du prix — d'autant plus coûteux qu'il est découvert tard."
+      },
+      {
+        "q": "Et si c'est l'ancien propriétaire qui a fait les travaux ?",
+        "a": "Les obligations suivent le bien, pas la personne. Ce que l'ancien propriétaire n'a pas régularisé, c'est à vous de le présenter — ou de l'expliquer — au moment de vendre. L'outil retrouve ce qui existe en mairie au nom des propriétaires successifs."
+      },
+      {
+        "q": "Conformité Travaux fait-il les démarches à ma place ?",
+        "a": "L'outil prépare et envoie les demandes en votre nom — à la mairie, au Consuel, aux assureurs — et range les réponses dans votre dossier. C'est un logiciel : personne chez Kaërt ne lit vos pièces ni ne se substitue à votre notaire."
+      },
+      {
+        "q": "Est-ce un conseil juridique ?",
+        "a": "Non. L'outil informe sur les pièces usuellement exigées et sur ce que prévoient les textes pour régulariser. L'appréciation de votre situation et la rédaction de l'acte relèvent du notaire."
+      }
+    ]
+  },
+  "gloss": {
+    "lbl": "Les mots que vous allez entendre",
+    "h2": "DAACT, décennale, dommages-ouvrage : six mots de notaire, en français.",
+    "sub": "Si vous vendez votre maison, ce sont les six termes qui reviendront. Aucun n'est compliqué une fois traduit.",
+    "items": [
+      {
+        "t": "La décennale",
+        "p": "L'assurance de l'entreprise. Elle l'oblige à réparer pendant dix ans les désordres graves de ce qu'elle a construit : fissures, infiltrations, affaissement. Elle suit le bien, donc l'acquéreur en profite après vous."
+      },
+      {
+        "t": "La dommages-ouvrage",
+        "p": "Votre assurance à vous, celle que le propriétaire devait prendre avant le chantier. Elle paie les réparations tout de suite, sans attendre qu'on sache qui est responsable. Presque personne ne la prend, et ça se voit à la vente."
+      },
+      {
+        "t": "La DAACT",
+        "p": "La déclaration de fin de travaux. Le permis dit ce que vous aviez le droit de construire ; elle dit que c'est bien ce que vous avez construit. Elle se dépose en mairie, même des années après."
+      },
+      {
+        "t": "L'attestation de non-contestation",
+        "p": "Le papier que la mairie délivre trois mois après votre déclaration de fin de travaux, quand elle n'a rien trouvé à redire. C'est elle que le notaire attend."
+      },
+      {
+        "t": "La déclaration préalable",
+        "p": "L'autorisation allégée, pour les petits projets : véranda, piscine, abri, parfois une extension. Un mois d'instruction. Plus simple qu'un permis, mais obligatoire dès certains seuils de surface."
+      },
+      {
+        "t": "Le PLU",
+        "p": "Les règles d'urbanisme de votre commune : ce qu'on a le droit de construire, à quelle hauteur, à quelle distance du voisin. C'est lui qui décide si des travaux non déclarés peuvent être régularisés aujourd'hui."
+      }
+    ]
+  },
+  "probar": {
+    "q": "Vous êtes agent immobilier ou notaire ?",
+    "a": "Le même dossier, de votre côté : pré-contrôle avant mandat, création des dossiers depuis votre boîte mail, note pour l'acte.",
+    "cta": "Voir l'offre professionnelle"
+  },
+  "recois": {
+    "lbl": "Le dossier à 49 €",
+    "h2": "Le dossier complet du bien : ce que vous recevez, et quand.",
+    "sub": "Le test est gratuit et reste gratuit. Le dossier payant, c'est quand vous voulez que les démarches soient faites plutôt que listées.",
+    "items": [
+      {
+        "t": "Tout de suite",
+        "p": "Votre dossier en ligne avec la liste des pièces, l'adresse exacte du service urbanisme de votre commune, et les courriers déjà rédigés à votre nom."
+      },
+      {
+        "t": "Dans l'heure",
+        "p": "La demande part à la mairie, signée de vous. Vous recevez une copie. Le Consuel et les assureurs suivent si votre dossier le demande."
+      },
+      {
+        "t": "Sous un mois",
+        "p": "Le délai légal de réponse d'une mairie. Les relances se font toutes seules à J+15 et J+30 : vous n'avez personne à rappeler."
+      },
+      {
+        "t": "Au fur et à mesure",
+        "p": "Chaque réponse de la mairie et chaque photo que vous déposez sont lues et classées automatiquement. L'outil vous montre ce qu'il a compris, vous corrigez d'un tap si besoin. Le dossier PDF est toujours à jour."
+      }
+    ],
+    "note": "Si la mairie répond qu'elle n'a aucune trace à cette adresse, vous recevez sa réponse et le bouton de remboursement apparaît dans votre dossier : un clic, rendu sous trois jours. Personne à appeler, personne à convaincre."
+  }
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "key": "t",
+    "q": "Quels travaux ont été faits sur le bien ?",
+    "help": "Les plus importants. S'il y en a eu plusieurs, refaites le test pour chacun : les pièces ne sont pas les mêmes.",
+    "opts": [
+      { "v": "ext", "t": "Extension ou surélévation", "s": "surface habitable créée, combles aménagés" },
+      { "v": "annexe", "t": "Piscine, véranda, garage, abri de jardin", "s": "construction annexe, même petite" },
+      { "v": "reno", "t": "Rénovation intérieure lourde", "s": "cloisons, électricité, plomberie, cuisine ouverte" },
+      { "v": "neuve", "t": "La maison a été construite par le vendeur", "s": "CCMI, lots séparés, ou auto-construction" }
+    ]
+  },
+  {
+    "key": "a",
+    "q": "Quand les travaux se sont-ils terminés ?",
+    "help": "La date qui compte, c'est la fin : réception, dernière facture, emménagement. Dix ans, c'est la durée des garanties.",
+    "opts": [
+      { "v": "lt10", "t": "Il y a moins de 10 ans", "s": "garanties décennale et dommages-ouvrage encore en cours" },
+      { "v": "gt10", "t": "Il y a plus de 10 ans", "s": "garanties éteintes, prescriptions acquises ou presque" },
+      { "v": "unk", "t": "Je ne sais plus exactement", "s": "autour de 10 ans, ou travaux faits par l'ancien propriétaire" }
+    ]
+  },
+  {
+    "key": "u",
+    "q": "Une autorisation d'urbanisme avait-elle été obtenue ?",
+    "help": "Permis de construire ou déclaration préalable, déposés en mairie avant les travaux.",
+    "opts": [
+      { "v": "oui", "t": "Oui", "s": "j'ai l'arrêté, ou je sais qu'il existe" },
+      { "v": "unk", "t": "Je ne sais pas, je ne retrouve rien", "s": "travaux anciens, ou faits par quelqu'un d'autre" },
+      { "v": "non", "t": "Non, rien n'a été déposé", "s": "" }
+    ]
+  },
+  {
+    "key": "w",
+    "q": "Qui a réalisé les travaux ?",
+    "help": "Ça change qui est responsable pendant dix ans — et quelles pièces existent.",
+    "opts": [
+      { "v": "ent", "t": "Des entreprises", "s": "avec devis et factures" },
+      { "v": "soi", "t": "Le vendeur lui-même", "s": "auto-construction, coups de main" },
+      { "v": "mix", "t": "Un peu des deux", "s": "" }
+    ]
+  },
+  {
+    "key": "d",
+    "q": "Une assurance dommages-ouvrage avait-elle été souscrite ?",
+    "help": "C'est l'assurance que le maître d'ouvrage doit prendre lui-même avant le chantier. La plupart des particuliers ne la prennent pas.",
+    "opts": [
+      { "v": "oui", "t": "Oui", "s": "j'ai l'attestation ou le contrat" },
+      { "v": "non", "t": "Non, ou je ne sais pas", "s": "" }
+    ]
+  }
+]

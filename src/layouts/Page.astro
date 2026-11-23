@@ -1,0 +1,16 @@
+---
+import Base from './Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import lexique from '../data/lexique.json';
+const lexScript = await import('../components/lexique.client.js?raw').then(m => m.default);
+interface Props { title: string; description: string; path?: string; ld?: any[]; type?: string; noindex?: boolean }
+const { title, description, path, ld, type, noindex } = Astro.props;
+---
+<Base title={title} description={description} path={path} ld={ld} type={type} noindex={noindex}>
+  <Nav />
+  <slot />
+  <Footer />
+  <script is:inline set:html={'window.LEXIQUE=' + JSON.stringify(lexique.termes) + ';'} />
+  <script is:inline set:html={lexScript} />
+</Base>

@@ -1,0 +1,67 @@
+---
+import Page from '../layouts/Page.astro';
+import Faq from '../components/Faq.astro';
+import WaitForm from '../components/WaitForm.astro';
+import publics from '../data/publics.json';
+import guides from '../data/guides.json';
+import home from '../data/pages/index.json';
+import { L } from '../lib/links';
+export function getStaticPaths() { return publics.map(p => ({ params: { public: p.slug }, props: { p } })); }
+const { p } = Astro.props;
+const o = home.pourqui.offres[p.offre];
+const site = Astro.site?.href.replace(/\/$/, '') ?? '';
+const faq = p.faq.map(([q, a]) => ({ q, a }));
+const lies = p.guides.map(s => guides.find(g => g.slug === s)).filter(Boolean);
+const ld = [
+  { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Accueil', item: site + '/' }, { '@type': 'ListItem', position: 2, name: p.lbl, item: site + '/' + p.slug + '/' }] },
+  { '@type': 'FAQPage', mainEntity: faq.map(i => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })) },
+];
+---
+<Page title={p.title} description={p.description} path={'/' + p.slug + '/'} ld={ld}>
+<header class="ph2"><div class="wrap" style="max-width:860px">
+  <nav class="crumb" aria-label="Fil d'Ariane"><a href={L('/')}>Accueil</a> › {p.lbl}</nav>
+  <h1>{p.h1}</h1>
+  <p class="sub" style="margin-top:16px">{p.chapo}</p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px"><a class="btn p" href={L('/test/')}>Faire le test gratuit</a><a class="btn s" href="#commencer" data-role={p.role}>Être prévenu à l'ouverture</a></div>
+</div></header>
+<section style="padding-block:clamp(28px,4vw,44px) 0"><div class="wrap" style="max-width:860px">
+  <div class="rep"><div class="lbl">La réponse courte</div><p>{p.reponse}</p></div>
+</div></section>
+<section style="padding-top:clamp(20px,3vw,30px)"><div class="wrap">
+  <h2>{p.pb.h}</h2>
+  <div class="tl2" style="grid-template-columns:repeat(3,1fr)">{p.pb.items.map(([t, x]) => <div><h3 class="h3c">{t}</h3><p>{x}</p></div>)}</div>
+</div></section>
+<section class="how"><div class="wrap">
+  <div class="two">
+    <div>
+      <h2>{p.fait.h}</h2>
+      <ul class="ck">{p.fait.items.map(i => <li>{i}</li>)}</ul>
+    </div>
+    <div class="card feat">
+      <div class="lbl">{o.who}</div><h3>{o.t}</h3>
+      <div class="pr">{o.pr}<span>{o.unit}</span></div>
+      <a class="btn p" href="#commencer" data-role={p.role} style="margin-top:18px">{o.cta}</a>
+      <div class="note">{o.note}</div>
+      <div class="note"><a href={L('/tarifs/')} style="color:var(--acc);font-weight:700">Tous les tarifs →</a></div>
+    </div>
+  </div>
+</div></section>
+<section><div class="wrap">
+  <div class="lbl">Guides utiles</div>
+  <h2 style="margin-top:12px">Les situations que vous rencontrerez le plus souvent</h2>
+  <div class="glist" style="margin-top:20px">{lies.map(a => <a class="gcard" href={L('/guides/' + a.slug + '/')}><b>{a.title}</b><p>{a.reponse.split('. ')[0]}.</p><span>Lire le guide →</span></a>)}</div>
+</div></section>
+<Faq title={'Questions fréquentes — ' + p.lbl.replace('Pour ', '')} items={faq} />
+<section class="final" id="commencer"><div class="wrap">
+  <div>
+    <div class="lbl" style="color:var(--acc2)">Ouverture</div>
+    <h2 style="margin-top:12px" id="waitf-title">Le test est ouvert. L'offre complète arrive.</h2>
+    <p>Laissez un e-mail : vous êtes prévenu à l'ouverture. Un seul message, pas de relance.</p>
+  </div>
+  <WaitForm />
+</div></section>
+<script is:inline define:vars={{ role: p.role }}>
+  var s = document.querySelector('#waitf select[name=role]');
+  if (s) for (var i = 0; i < s.options.length; i++) if (s.options[i].text === role) s.selectedIndex = i;
+</script>
+</Page>

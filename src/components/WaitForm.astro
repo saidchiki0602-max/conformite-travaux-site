@@ -1,0 +1,19 @@
+---
+// Formulaire « me prévenir » + câblage commun des formulaires de la page (dont celui de l'outil).
+// Même contrat que kaertgroupe.com : table Supabase via PUBLIC_FORM_ENDPOINT + PUBLIC_SUPABASE_ANON.
+const script = await import('./forms.client.js?raw').then(m => m.default);
+---
+<form id="waitf" novalidate>
+  <label>Vous êtes</label>
+  <select name="role"><option>Vendeur</option><option>Agent immobilier</option><option>Notaire ou clerc</option><option>Autre</option></select>
+  <label>E-mail</label>
+  <input name="contact" type="email" placeholder="vous@exemple.fr" required autocomplete="email">
+  <label>Commune du bien <span style="text-transform:none;letter-spacing:0;font-weight:500">(facultatif)</span></label>
+  <input name="message" placeholder="Bruz, Pacé, Cesson…">
+  <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+  <button class="btn w" type="submit" style="width:100%;margin-top:18px">Me prévenir à l'ouverture</button>
+  <div class="ok" data-ok hidden>C'est noté. On vous écrit le jour de l'ouverture.</div>
+  <div class="err" data-err hidden></div>
+  <p style="font-size:12px;color:rgba(255,255,255,.4);margin-top:12px">Vos coordonnées servent à vous prévenir, à rien d'autre. Suppression sur simple demande à contact@kaertgroupe.com.</p>
+</form>
+<script is:inline define:vars={{ FORM_ENDPOINT: import.meta.env.PUBLIC_FORM_ENDPOINT ?? '', FORM_ANON: import.meta.env.PUBLIC_SUPABASE_ANON ?? '' }} set:html={script} />

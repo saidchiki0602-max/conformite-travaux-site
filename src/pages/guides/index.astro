@@ -1,0 +1,36 @@
+---
+import Page from '../../layouts/Page.astro';
+import guides from '../../data/guides.json';
+import Faq from '../../components/Faq.astro';
+import { L } from '../../lib/links';
+const faq = [
+  { q: "Peut-on vendre une maison avec des travaux non déclarés ?", a: "Oui. Aucun texte ne l'interdit. Ce qui est encadré, c'est l'information : le notaire doit porter l'irrégularité à la connaissance de l'acquéreur et la mentionner dans l'acte. Le coût dépend presque entièrement du moment où le sujet est traité — avant l'annonce, il est quasi nul ; découvert au compromis, il se paie en renégociation." },
+  { q: "Combien de temps prend une régularisation ?", a: "Un mois d'instruction pour une déclaration préalable, deux à trois mois pour un permis. Pour une déclaration d'achèvement déposée tardivement, comptez trois mois de délai de contestation puis quinze jours pour l'attestation, soit environ quatre mois." },
+  { q: "Qui doit régulariser, le vendeur ou l'acquéreur ?", a: "En pratique le vendeur, parce que c'est lui qui a les pièces et que l'acquéreur n'a aucune raison d'acheter un problème. Rien n'interdit de convenir du contraire dans l'acte, avec un ajustement de prix." },
+  { q: "Le notaire vérifie-t-il systématiquement les travaux ?", a: "Il interroge le vendeur et consulte les documents d'urbanisme. Ce qu'il ne fait pas d'office, c'est comparer la surface du DPE à celle du cadastre — c'est pourtant là que la plupart des travaux non déclarés se voient." },
+];
+const faqLd = { '@type': 'FAQPage', mainEntity: faq.map(i => ({ '@type': 'Question', name: i.q, acceptedAnswer: { '@type': 'Answer', text: i.a } })) };
+const title = "Guides — travaux non déclarés et vente d'une maison";
+const description = "Extension sans permis, déclaration d'achèvement jamais déposée, véranda ou piscine non déclarée : ce que le notaire exige et comment régulariser avant la vente.";
+const ld = [faqLd, { '@type': 'ItemList', itemListElement: guides.map((g, i) => ({ '@type': 'ListItem', position: i + 1, name: g.title, url: '/guides/' + g.slug + '/' })) }];
+---
+<Page title={title} description={description} path="/guides/" ld={ld}>
+<header class="ph2"><div class="wrap">
+  <div class="lbl">Guides</div>
+  <h1 style="margin-top:12px">Travaux non déclarés et vente : les cas les plus fréquents.</h1>
+  <p class="sub" style="margin-top:16px">Ce que dit la loi, ce que le notaire exigera, et le chemin de régularisation — situation par situation. Pour votre cas précis, le <a href={L('/#outil')} style="color:var(--acc);font-weight:700">test en 5 questions</a> donne la liste des pièces.</p>
+</div></header>
+<section style="padding-bottom:0"><div class="wrap" style="max-width:780px"><div class="art">
+  <h2>Pourquoi les travaux bloquent une vente</h2>
+  <p>Une maison change presque toujours entre sa construction et sa revente : une extension, des combles aménagés, une véranda, une piscine, l'électricité refaite. Chacun de ces chantiers laisse une trace administrative — ou aurait dû en laisser une. Le jour de la vente, le notaire doit réunir ces traces : l'autorisation qui permettait de construire, la déclaration qui atteste que les travaux sont finis et conformes, les assurances qui couvraient les entreprises, les factures qui datent le tout.</p>
+  <p>Dans la majorité des dossiers incomplets, il ne s'agit pas de fraude mais d'oubli : un permis obtenu mais une fin de travaux jamais déclarée, une véranda posée sans savoir qu'une déclaration préalable était due, une assurance dommages-ouvrage que personne n'avait conseillé de souscrire. Ces situations se règlent presque toujours — à condition de s'y prendre avant le compromis, pas trois semaines avant la signature.</p>
+  <h2>Ce que ces guides donnent</h2>
+  <p>Pour chaque situation : ce que prévoient les textes, les délais réels de régularisation, ce que le notaire exigera, et ce que ça change au prix selon le moment où vous traitez le sujet. Ils sont écrits pour un vendeur, pas pour un juriste — les termes de métier y sont traduits au passage.</p>
+</div></div></section>
+<section><div class="wrap">
+  <div class="glist">
+    {guides.map(g => <a class="gcard" href={L('/guides/' + g.slug + '/')}><b>{g.title}</b><p>{g.chapo}</p><span>Lire le guide →</span></a>)}
+  </div>
+</div></section>
+<Faq title="Questions fréquentes" items={faq} />
+</Page>

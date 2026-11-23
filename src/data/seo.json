@@ -1,0 +1,156 @@
+{
+  "index": {
+    "requete": "pièces travaux vente maison",
+    "variantes": [
+      "dossier travaux notaire",
+      "papiers travaux pour vendre",
+      "conformité travaux vente"
+    ],
+    "intention": "Un vendeur, un agent ou un notaire veut savoir quels papiers seront exigés pour un bien qui a eu des travaux.",
+    "pourquoi": "Page d'entrée : le test répond tout de suite, les offres suivent."
+  },
+  "guides": {
+    "requete": "travaux non déclarés vente maison",
+    "variantes": [
+      "régulariser travaux avant vente",
+      "vendre maison travaux sans autorisation"
+    ],
+    "intention": "Chercher le cas qui ressemble au sien.",
+    "pourquoi": "Index des guides, passerelle vers le test."
+  },
+  "guides/vendre-maison-extension-sans-permis": {
+    "requete": "vendre maison extension sans permis",
+    "variantes": [
+      "extension sans permis prescription",
+      "régulariser extension non déclarée"
+    ],
+    "intention": "Un vendeur découvre que son extension n'a pas de permis et veut savoir s'il peut vendre.",
+    "pourquoi": "Requête à forte intention, directement reliée au test."
+  },
+  "guides/declaration-achevement-daact-non-deposee": {
+    "requete": "déclaration achèvement travaux non déposée",
+    "variantes": [
+      "DAACT oubliée",
+      "attestation de non-contestation délai"
+    ],
+    "intention": "Le permis existe mais la fin de travaux n'a jamais été déclarée.",
+    "pourquoi": "Cas le plus fréquent chez les notaires."
+  },
+  "guides/veranda-piscine-non-declaree-vente": {
+    "requete": "véranda non déclarée",
+    "variantes": [
+      "piscine non déclarée vente",
+      "véranda non déclarée vendre maison",
+      "abri de jardin sans déclaration préalable"
+    ],
+    "intention": "Une annexe a été construite sans déclaration préalable.",
+    "pourquoi": "Deuxième cause de dossier incomplet."
+  },
+  "guides/regulariser-construction-sans-permis": {
+    "requete": "régulariser une construction sans permis",
+    "variantes": [
+      "permis de construire de régularisation",
+      "construction sans permis prescription",
+      "déclaration préalable a posteriori"
+    ],
+    "intention": "Le propriétaire sait que c'est irrégulier et cherche la marche à suivre.",
+    "pourquoi": "Intention la plus forte de tout le site : il est déjà décidé à agir."
+  },
+  "guides/acheter-maison-travaux-non-declares": {
+    "requete": "acheter une maison avec des travaux non déclarés",
+    "variantes": [
+      "acheter maison sans permis de construire risques",
+      "vendeur sans DAACT que faire"
+    ],
+    "intention": "L'acquéreur découvre le problème avant de signer et cherche quoi exiger.",
+    "pourquoi": "Public neuf pour le site, aussi nombreux que les vendeurs, et futur utilisateur du carnet du logement."
+  },
+  "guides/surface-non-declaree-taxe-fonciere": {
+    "requete": "surface non déclarée taxe foncière",
+    "variantes": [
+      "déclarer une véranda aux impôts",
+      "piscine non déclarée impôts",
+      "formulaire H1 oubli"
+    ],
+    "intention": "Peur du fisc : porte d'entrée vers le sujet de la vente.",
+    "pourquoi": "Volume plus large que les requêtes d'urbanisme, et mène au même dossier."
+  },
+  "guides/garage-transforme-en-chambre-sans-declaration": {
+    "requete": "garage transformé en chambre sans déclaration",
+    "variantes": [],
+    "intention": "",
+    "pourquoi": ""
+  },
+  "guides/combles-amenages-sans-declaration": {
+    "requete": "combles aménagés sans déclaration",
+    "variantes": [],
+    "intention": "",
+    "pourquoi": ""
+  },
+  "guides/abri-de-jardin-sans-autorisation": {
+    "requete": "abri de jardin sans autorisation",
+    "variantes": [],
+    "intention": "",
+    "pourquoi": ""
+  },
+  "guides/piscine-non-declaree-vente-maison": {
+    "requete": "piscine non déclarée",
+    "variantes": [],
+    "intention": "",
+    "pourquoi": ""
+  },
+  "guides/fenetres-facade-modifiees-sans-declaration": {
+    "requete": "fenêtres façade sans déclaration",
+    "variantes": [],
+    "intention": "",
+    "pourquoi": ""
+  },
+  "guides/vendre-maison-construite-soi-meme": {
+    "requete": "vendre une maison construite soi-même",
+    "variantes": [],
+    "intention": "",
+    "pourquoi": ""
+  },
+  "vendeur": {
+    "requete": "vendre maison travaux",
+    "variantes": [],
+    "intention": "",
+    "pourquoi": ""
+  },
+  "agence-immobiliere": {
+    "requete": "agents immobiliers travaux mandat",
+    "variantes": [],
+    "intention": "",
+    "pourquoi": ""
+  },
+  "notaire": {
+    "requete": "notaires pièces travaux vente",
+    "variantes": [],
+    "intention": "",
+    "pourquoi": ""
+  },
+  "tarifs": {
+    "requete": "tarifs",
+    "variantes": [],
+    "intention": "",
+    "pourquoi": ""
+  },
+  "comment-ca-marche": {
+    "requete": "comment ça marche",
+    "variantes": [],
+    "intention": "",
+    "pourquoi": ""
+  },
+  "test": {
+    "requete": "test dossier travaux vente",
+    "variantes": [],
+    "intention": "",
+    "pourquoi": ""
+  },
+  "lexique": {
+    "requete": "lexique travaux vente",
+    "variantes": [],
+    "intention": "",
+    "pourquoi": ""
+  }
+}

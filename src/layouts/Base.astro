@@ -1,0 +1,67 @@
+---
+// Enveloppe commune : <head>, balises Google / réseaux, Organization + SoftwareApplication.
+// Aucune phrase destinée au visiteur ici — elles vivent dans src/data/pages/*.json.
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/fraunces/600.css';
+import '@fontsource/fraunces/700.css';
+import '../styles/global.css';
+const GSC = import.meta.env.PUBLIC_GSC_TOKEN || '';
+const CF = import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN || '';  // mesure d'audience sans cookie (Cloudflare Web Analytics), facultative
+interface Props { title: string; description: string; path?: string; ld?: any[]; type?: string; noindex?: boolean }
+const { title, description, path = '/', ld = [], type = 'website', noindex = false } = Astro.props;
+const site = Astro.site?.href.replace(/\/$/, '') ?? 'https://conformitetravaux.com';
+const url = site + path;
+const org = {
+  '@type': 'Organization', '@id': site + '/#org', name: 'Kaërt Groupe', url: 'https://kaertgroupe.com/',
+  description: "Éditeur de logiciels pour les professionnels du bâtiment et de l'immobilier.",
+  address: { '@type': 'PostalAddress', addressRegion: 'Bretagne', addressCountry: 'FR' },
+};
+const app = {
+  '@type': 'SoftwareApplication', '@id': site + '/#app', name: 'Conformité Travaux',
+  applicationCategory: 'BusinessApplication', operatingSystem: 'Web', url: site + '/',
+  description: "Outil pour vendeurs, agents immobiliers et notaires : les pièces travaux exigées pour la vente d'une maison (permis, DAACT, dommages-ouvrage, décennales), ce qui manque, les risques et la régularisation.",
+  offers: [
+    { '@type': 'Offer', price: '0', priceCurrency: 'EUR', name: 'Test en 5 questions' },
+    { '@type': 'Offer', price: '49', priceCurrency: 'EUR', name: 'Dossier du bien — vendeur' },
+    { '@type': 'Offer', price: '79', priceCurrency: 'EUR', name: 'Agence immobilière — par mois' },
+    { '@type': 'Offer', price: '149', priceCurrency: 'EUR', name: 'Étude notariale — par mois' },
+  ],
+  publisher: { '@id': site + '/#org' },
+};
+---
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={url}>
+  <meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow'}>
+  <meta property="og:type" content={type}>
+  <meta property="og:site_name" content="Conformité Travaux">
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={url}>
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:image" content={site + '/conformite-travaux-pieces-notaire-vente-maison.png'}>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content={site + '/conformite-travaux-pieces-notaire-vente-maison.png'}>
+  <meta name="theme-color" content="#231F33">
+  {GSC && <meta name="google-site-verification" content={GSC}>}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': [org, app, ...ld] })} />
+</head>
+<body>
+  <slot />
+  {CF && <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: CF })}></script>}
+</body>
+</html>

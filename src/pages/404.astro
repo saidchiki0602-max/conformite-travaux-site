@@ -1,0 +1,12 @@
+---
+import Page from '../layouts/Page.astro';
+import { L } from '../lib/links';
+---
+<Page title="Page introuvable — Conformité Travaux" description="Cette page n'existe pas ou a été déplacée. Retrouvez le test gratuit et les guides sur les travaux non déclarés et la vente d'une maison." path="/404.html" noindex>
+<header class="ph2"><div class="wrap" style="max-width:780px">
+  <div class="lbl">Erreur 404</div>
+  <h1 style="margin-top:12px">Cette page n'existe pas, ou plus.</h1>
+  <p class="sub" style="margin-top:16px">L'adresse a peut-être changé. Voici les deux entrées utiles du site.</p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px"><a class="btn p" href={L('/#outil')}>Faire le test gratuit</a><a class="btn s" href={L('/guides/')}>Voir les guides</a><a class="btn s" href={L('/')}>Retour à l'accueil</a></div>
+</div></header>
+</Page>
