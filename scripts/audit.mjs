@@ -19,7 +19,7 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
 const llms = fs.existsSync(path.join(dir, 'llms.txt')) ? fs.readFileSync(path.join(dir, 'llms.txt'), 'utf8') : '';
 const sitemap = fs.existsSync(path.join(dir, 'sitemap.xml')) ? fs.readFileSync(path.join(dir, 'sitemap.xml'), 'utf8') : '';
 for (const f of files) {
-  const h = fs.readFileSync(path.join(dir, f), 'utf8'); if (/http-equiv="refresh"/.test(h)) continue; const p = keyOf(f); const legal = /^(404|mentions-legales|confidentialite)$/.test(p);
+  const h = fs.readFileSync(path.join(dir, f), 'utf8'); if (/http-equiv="refresh"/.test(h)) continue; const p = keyOf(f); const legal = /^(404|mentions-legales|confidentialite|conditions)$/.test(p);
   const title = dec((h.match(/<title>([^<]*)<\/title>/) || [])[1] || '');
   const desc = dec((h.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '');
   const h1s = [...h.matchAll(/<h1[^>]*>([\s\S]*?)<\/h1>/g)].map(m => strip(m[1]).trim());

@@ -1,0 +1,34 @@
+---
+import Page from '../layouts/Page.astro';
+import home from '../data/pages/index.json';
+const v = home.pourqui.offres[0];
+---
+<Page title="Conditions de vente — Conformité Travaux" description="Conditions de vente du dossier travaux Conformité Travaux : ce qui est compris, le prix, le paiement, la rétractation, la responsabilité et vos données." path="/conditions/">
+<header class="ph2"><div class="wrap" style="max-width:780px"><div class="lbl">Informations légales</div><h1 style="margin-top:12px">Conditions de vente</h1><p class="sub" style="margin-top:12px">En vigueur au 23 novembre 2026.</p></div></header>
+<section style="padding-top:0"><div class="wrap" style="max-width:780px"><div class="art">
+  <h2>Qui vend, et quoi</h2>
+  <p>Le service est vendu par Kaërt Groupe SAS, 13 rue de la Basse Ville, 35190 Québriac, immatriculée au registre du commerce et des sociétés de Rennes (contact : <a href="mailto:contact@kaertgroupe.com">contact@kaertgroupe.com</a>). Il s'agit d'un logiciel en ligne, le « dossier travaux du bien », qui aide le vendeur d'un bien ayant fait l'objet de travaux à réunir les pièces que le notaire demandera.</p>
+  <h2>Ce qui est compris</h2>
+  <ul>
+    <li>La liste des pièces attendues pour chaque chantier déclaré, avec leur état et le chemin pour les obtenir.</li>
+    <li>La préparation des lettres de demande (mairie, assureurs, entreprises, organismes), leur envoi par e-mail au nom du vendeur après qu'il les a relues et validées, et jusqu'à deux relances automatiques.</li>
+    <li>La lecture automatique des documents déposés, qui les identifie, les date et les range.</li>
+    <li>Le partage du dossier par lien avec le notaire, l'agent immobilier ou l'acquéreur, et son export en PDF.</li>
+    <li>Pour une régularisation : les étapes, les formulaires officiels à utiliser et les informations du dossier à y reporter.</li>
+  </ul>
+  <h2>Ce qui n'est pas compris</h2>
+  <p>Ni Kaërt Groupe ni ses équipes n'effectuent de démarche à la main : c'est le logiciel qui envoie les demandes, au nom du vendeur, et seulement celles qu'il a validées. Le dépôt d'une demande sur le portail en ligne d'une mairie reste fait par le vendeur lui-même, ces portails exigeant qu'il se connecte. Le service ne constitue pas une consultation juridique et ne remplace pas l'appréciation du notaire chargé de la vente. Les délais et les réponses des administrations, assureurs et entreprises ne dépendent pas de nous.</p>
+  <h2>Prix</h2>
+  <p>Le prix est payé une fois, pour un bien : <b>{v.pr.replace(' €','')} € TTC</b> pour un chantier à documenter ; <b>349 € TTC</b> pour plusieurs chantiers sur le même bien, ou lorsqu'une régularisation de travaux non autorisés est à mener. Si un chantier est ajouté à un dossier déjà réglé à 149 €, seul le complément de 200 € est demandé. La liste des pièces est consultable gratuitement avant tout paiement.</p>
+  <h2>Paiement et facture</h2>
+  <p>Le paiement se fait en ligne par carte bancaire, par l'intermédiaire de Stripe. Le dossier est ouvert dès la confirmation du paiement. Une facture est adressée par e-mail.</p>
+  <h2>Droit de rétractation</h2>
+  <p>Vous disposez de quatorze jours à compter du paiement pour vous rétracter, en écrivant à <a href="mailto:contact@kaertgroupe.com">contact@kaertgroupe.com</a>. Si aucune demande n'a été envoyée et aucun document lu, vous êtes remboursé en totalité sous quatorze jours. Si vous utilisez le service pendant ce délai (envoi d'une demande, lecture d'un document), vous demandez expressément qu'il commence avant la fin du délai de rétractation ; en cas de rétractation, le montant correspondant au service déjà fourni reste dû, et le reste vous est remboursé.</p>
+  <h2>Responsabilité</h2>
+  <p>La liste des pièces repose sur les textes en vigueur et sur les réponses que vous donnez ; une réponse inexacte peut fausser le résultat. Kaërt Groupe s'engage à mettre en œuvre les moyens nécessaires au bon fonctionnement du service, sans pouvoir garantir l'issue de la vente, la réponse d'un tiers ou la date de signature.</p>
+  <h2>Vos données</h2>
+  <p>Les données du dossier et leur traitement sont décrits dans la page <a href="/confidentialite/">Confidentialité</a>. Vous pouvez supprimer votre dossier à tout moment depuis l'application.</p>
+  <h2>Litiges</h2>
+  <p>En cas de difficulté, écrivez-nous d'abord : nous répondons sous huit jours ouvrés. À défaut d'accord, vous pouvez recourir gratuitement à un médiateur de la consommation, dont les coordonnées vous sont communiquées sur simple demande, ou à la plateforme européenne de règlement en ligne des litiges. Les présentes conditions sont soumises au droit français.</p>
+</div></div></section>
+</Page>
