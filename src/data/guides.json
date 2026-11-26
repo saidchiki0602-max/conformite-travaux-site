@@ -62,7 +62,25 @@
       "Code civil, art. 1641 (vices cachés) et 1792-1 (vendeur réputé constructeur)"
     ],
     "publie": "2026-11-21",
-    "maj": "2026-11-21"
+    "maj": "2026-11-26",
+    "liens": [
+      [
+        "Service-Public — Infractions aux règles d'urbanisme : sanctions et délais de prescription",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F642"
+      ],
+      [
+        "Service-Public — Déclaration préalable de travaux",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F17578"
+      ],
+      [
+        "Service-Public — Déclaration attestant l'achèvement et la conformité des travaux (DAACT)",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F1997"
+      ],
+      [
+        "Service-Public — Garantie décennale des constructeurs",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F2034"
+      ]
+    ]
   },
   {
     "slug": "declaration-achevement-daact-non-deposee",
@@ -126,7 +144,17 @@
       "Formulaire Cerfa n° 13408 (déclaration attestant l'achèvement et la conformité des travaux)"
     ],
     "publie": "2026-11-21",
-    "maj": "2026-11-21"
+    "maj": "2026-11-26",
+    "liens": [
+      [
+        "Service-Public — Déclaration attestant l'achèvement et la conformité des travaux (DAACT)",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F1997"
+      ],
+      [
+        "Service-Public — Infractions aux règles d'urbanisme : sanctions et délais de prescription",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F642"
+      ]
+    ]
   },
   {
     "slug": "veranda-piscine-non-declaree-vente",
@@ -183,7 +211,21 @@
       "Code général des impôts, art. 1406 (déclaration des constructions nouvelles)"
     ],
     "publie": "2026-11-21",
-    "maj": "2026-11-21"
+    "maj": "2026-11-26",
+    "liens": [
+      [
+        "Service-Public — Installation ou construction d'une piscine privative",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F31404"
+      ],
+      [
+        "Service-Public — Déclaration préalable de travaux",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F17578"
+      ],
+      [
+        "Service-Public Entreprendre — Quels travaux déclarer aux impôts, et dans quel délai",
+        "https://entreprendre.service-public.gouv.fr/vosdroits/F35742"
+      ]
+    ]
   },
   {
     "slug": "regulariser-construction-sans-permis",
@@ -249,7 +291,25 @@
       "Code de l'urbanisme, art. L331-1 et suivants (taxe d'aménagement)"
     ],
     "publie": "2026-11-21",
-    "maj": "2026-11-21"
+    "maj": "2026-11-26",
+    "liens": [
+      [
+        "Service-Public — Infractions aux règles d'urbanisme : sanctions et délais de prescription",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F642"
+      ],
+      [
+        "Service-Public — Déclaration préalable de travaux",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F17578"
+      ],
+      [
+        "Service-Public — Dans quels cas faut-il faire appel à un architecte ?",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F20568"
+      ],
+      [
+        "Justice.fr — Taxe d'aménagement",
+        "https://www.justice.fr/fiche/taxe-amenagement"
+      ]
+    ]
   },
   {
     "slug": "acheter-maison-travaux-non-declares",
@@ -317,7 +377,21 @@
       "Code civil, art. 1792 et 1792-1 (garantie décennale) ; Code des assurances, art. L242-1 (dommages-ouvrage)"
     ],
     "publie": "2026-11-21",
-    "maj": "2026-11-21"
+    "maj": "2026-11-26",
+    "liens": [
+      [
+        "Service-Public — Infractions aux règles d'urbanisme : sanctions et délais de prescription",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F642"
+      ],
+      [
+        "Service-Public — Garantie décennale des constructeurs",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F2034"
+      ],
+      [
+        "Service-Public — Assurance dommages-ouvrage",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F2032"
+      ]
+    ]
   },
   {
     "slug": "surface-non-declaree-taxe-fonciere",
@@ -381,7 +455,21 @@
       "Code de l'urbanisme, art. L331-1 et suivants (taxe d'aménagement)"
     ],
     "publie": "2026-11-21",
-    "maj": "2026-11-21"
+    "maj": "2026-11-26",
+    "liens": [
+      [
+        "Service-Public Entreprendre — Quels travaux déclarer aux impôts, et dans quel délai",
+        "https://entreprendre.service-public.gouv.fr/vosdroits/F35742"
+      ],
+      [
+        "impots.gouv.fr — Construction neuve : exonération de taxe foncière pendant deux ans",
+        "https://www.impots.gouv.fr/particulier/questions/jai-fait-construire-une-maison-puis-je-beneficier-dune-exoneration-de-la-0"
+      ],
+      [
+        "Justice.fr — Taxe d'aménagement",
+        "https://www.justice.fr/fiche/taxe-amenagement"
+      ]
+    ]
   },
   {
     "slug": "garage-transforme-en-chambre-sans-declaration",
@@ -446,7 +534,25 @@
       "Code de l'urbanisme, art. R431-2 (architecte au-delà de 150 m²)"
     ],
     "publie": "2026-11-22",
-    "maj": "2026-11-22"
+    "maj": "2026-11-26",
+    "liens": [
+      [
+        "Service-Public — Déclaration préalable de travaux",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F17578"
+      ],
+      [
+        "Service-Public — Infractions aux règles d'urbanisme : sanctions et délais de prescription",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F642"
+      ],
+      [
+        "Service-Public Entreprendre — Quels travaux déclarer aux impôts, et dans quel délai",
+        "https://entreprendre.service-public.gouv.fr/vosdroits/F35742"
+      ],
+      [
+        "Service-Public — Dans quels cas faut-il faire appel à un architecte ?",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F20568"
+      ]
+    ]
   },
   {
     "slug": "combles-amenages-sans-declaration",
@@ -510,7 +616,21 @@
       "Code général des impôts, art. 1406 (déclaration dans les 90 jours)"
     ],
     "publie": "2026-11-22",
-    "maj": "2026-11-22"
+    "maj": "2026-11-26",
+    "liens": [
+      [
+        "Service-Public — Déclaration préalable de travaux",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F17578"
+      ],
+      [
+        "Service-Public — Infractions aux règles d'urbanisme : sanctions et délais de prescription",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F642"
+      ],
+      [
+        "Service-Public Entreprendre — Quels travaux déclarer aux impôts, et dans quel délai",
+        "https://entreprendre.service-public.gouv.fr/vosdroits/F35742"
+      ]
+    ]
   },
   {
     "slug": "abri-de-jardin-sans-autorisation",
@@ -567,7 +687,25 @@
       "Code général des impôts, art. 1406 (déclaration dans les 90 jours)"
     ],
     "publie": "2026-11-22",
-    "maj": "2026-11-22"
+    "maj": "2026-11-26",
+    "liens": [
+      [
+        "Service-Public — Déclaration préalable de travaux",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F17578"
+      ],
+      [
+        "Service-Public — Infractions aux règles d'urbanisme : sanctions et délais de prescription",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F642"
+      ],
+      [
+        "Justice.fr — Taxe d'aménagement",
+        "https://www.justice.fr/fiche/taxe-amenagement"
+      ],
+      [
+        "Service-Public Entreprendre — Quels travaux déclarer aux impôts, et dans quel délai",
+        "https://entreprendre.service-public.gouv.fr/vosdroits/F35742"
+      ]
+    ]
   },
   {
     "slug": "piscine-non-declaree-vente-maison",
@@ -631,7 +769,21 @@
       "Code général des impôts, art. 1406 (déclaration dans les 90 jours)"
     ],
     "publie": "2026-11-22",
-    "maj": "2026-11-22"
+    "maj": "2026-11-26",
+    "liens": [
+      [
+        "Service-Public — Installation ou construction d'une piscine privative",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F31404"
+      ],
+      [
+        "Justice.fr — Taxe d'aménagement",
+        "https://www.justice.fr/fiche/taxe-amenagement"
+      ],
+      [
+        "Service-Public Entreprendre — Quels travaux déclarer aux impôts, et dans quel délai",
+        "https://entreprendre.service-public.gouv.fr/vosdroits/F35742"
+      ]
+    ]
   },
   {
     "slug": "fenetres-facade-modifiees-sans-declaration",
@@ -693,7 +845,21 @@
       "Code de l'urbanisme, art. R462-7 (délai de contrôle porté à cinq mois)"
     ],
     "publie": "2026-11-22",
-    "maj": "2026-11-22"
+    "maj": "2026-11-26",
+    "liens": [
+      [
+        "Service-Public — Déclaration préalable de travaux",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F17578"
+      ],
+      [
+        "Service-Public Entreprendre — Travaux aux abords d'un monument historique",
+        "https://entreprendre.service-public.gouv.fr/vosdroits/F32190"
+      ],
+      [
+        "Service-Public — Déclaration attestant l'achèvement et la conformité des travaux (DAACT)",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F1997"
+      ]
+    ]
   },
   {
     "slug": "vendre-maison-construite-soi-meme",
@@ -756,6 +922,20 @@
       "Code de l'urbanisme, art. L462-1 (déclaration d'achèvement)"
     ],
     "publie": "2026-11-22",
-    "maj": "2026-11-22"
+    "maj": "2026-11-26",
+    "liens": [
+      [
+        "Service-Public — Garantie décennale des constructeurs",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F2034"
+      ],
+      [
+        "Service-Public — Assurance dommages-ouvrage",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F2032"
+      ],
+      [
+        "Service-Public — Déclaration attestant l'achèvement et la conformité des travaux (DAACT)",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F1997"
+      ]
+    ]
   }
 ]

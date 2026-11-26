@@ -15,6 +15,7 @@ const autres = guides.filter(x => x.slug !== g.slug).slice(0, 3);
 const ld = [
   { '@type': 'Article', headline: g.h1, description: g.description, inLanguage: 'fr-FR', mainEntityOfPage: url,
     datePublished: g.publie, dateModified: g.maj,
+    citation: (g.liens || []).map((l: string[]) => ({ '@type': 'WebPage', name: l[0], url: l[1] })),
     author: { '@id': site + '/#org' },
     publisher: { '@id': site + '/#org' }, image: site + '/conformite-travaux-pieces-notaire-vente-maison.png' },
   { '@type': 'BreadcrumbList', itemListElement: [
@@ -39,7 +40,8 @@ const ld = [
   <div class="src">
     <b>Textes de référence</b>
     <ul>{g.sources.map(s => <li>{s}</li>)}</ul>
-    <p>Textes consultables sur <a href="https://www.legifrance.gouv.fr/" rel="noopener">Légifrance</a>. Ce guide informe ; l'appréciation de votre situation revient à votre notaire.</p>
+    {g.liens && g.liens.length > 0 && <><b style="display:block;margin-top:14px">Fiches officielles</b><ul>{g.liens.map((l: string[]) => <li><a href={l[1]} rel="noopener" target="_blank">{l[0]}</a></li>)}</ul></>}
+    <p>Liens vérifiés le {fr(g.maj)}. Textes consultables sur <a href="https://www.legifrance.gouv.fr/" rel="noopener">Légifrance</a>. Ce guide informe ; l'appréciation de votre situation revient à votre notaire.</p>
   </div>
   <div class="next" style="margin-top:34px">
     <div><h3>Votre cas en deux minutes</h3><p>Cinq questions sur vos travaux, et la liste des pièces que le notaire attendra — avec le chemin pour chacune.</p></div>
